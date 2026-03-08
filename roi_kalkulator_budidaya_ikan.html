@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalkulator ROI Budidaya Ikan</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7f9;
+      color: #1f2937;
+      padding: 24px;
+    }
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    h1 {
+      font-size: 28px;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+    p.sub {
+      margin-top: 0;
+      color: #6b7280;
+      line-height: 1.5;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .field label {
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .field input {
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 15px;
+      width: 100%;
+    }
+    .field small {
+      color: #6b7280;
+      line-height: 1.4;
+    }
+    .full { grid-column: 1 / -1; }
+    button {
+      border: none;
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      background: #0f766e;
+      color: white;
+      width: 100%;
+    }
+    .secondary {
+      background: #e5e7eb;
+      color: #111827;
+      margin-top: 10px;
+    }
+    .result-box {
+      padding: 14px;
+      border-radius: 12px;
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      margin-bottom: 12px;
+    }
+    .result-box h3 {
+      margin: 0 0 6px 0;
+      font-size: 14px;
+      color: #6b7280;
+    }
+    .value {
+      font-size: 24px;
+      font-weight: 800;
+    }
+    .good { color: #047857; }
+    .bad { color: #b91c1c; }
+    ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      line-height: 1.7;
+    }
+    .formula {
+      background: #f9fafb;
+      border: 1px dashed #cbd5e1;
+      border-radius: 12px;
+      padding: 14px;
+      margin-top: 18px;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    @media (max-width: 860px) {
+      .container { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
+      .full { grid-column: auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Kalkulator ROI Budidaya Ikan</h1>
+      <p class="sub">
+        Hitung modal, omzet, laba/rugi, ROI, BEP harga per kg, dan estimasi hasil panen. Cocok untuk simulasi nila, patin, gurame, lele, atau ikan lain.
+      </p>
+
+      <div class="grid">
+        <div class="field">
+          <label for="jumlahBibit">Jumlah bibit ditebar (ekor)</label>
+          <input type="number" id="jumlahBibit" value="5000" />
+          <small>Total bibit saat awal tebar.</small>
+        </div>
+
+        <div class="field">
+          <label for="hargaBibit">Harga bibit per ekor (Rp)</label>
+          <input type="number" id="hargaBibit" value="350" />
+          <small>Contoh: Rp350 per ekor.</small>
+        </div>
+
+        <div class="field">
+          <label for="survivalRate">Survival rate (%)</label>
+          <input type="number" id="survivalRate" value="85" />
+          <small>Persentase ikan hidup sampai panen.</small>
+        </div>
+
+        <div class="field">
+          <label for="beratPanen">Berat panen rata-rata per ekor (kg)</label>
+          <input type="number" id="beratPanen" step="0.01" value="0.45" />
+          <small>Contoh: 0,45 kg per ekor.</small>
+        </div>
+
+        <div class="field">
+          <label for="hargaJual">Harga jual ikan per kg (Rp)</label>
+          <input type="number" id="hargaJual" value="28000" />
+          <small>Harga jual saat panen.</small>
+        </div>
+
+        <div class="field">
+          <label for="biayaPakan">Total biaya pakan (Rp)</label>
+          <input type="number" id="biayaPakan" value="18000000" />
+          <small>Akumulasi seluruh biaya pakan.</small>
+        </div>
+
+        <div class="field">
+          <label for="biayaObat">Biaya obat/vitamin (Rp)</label>
+          <input type="number" id="biayaObat" value="1200000" />
+          <small>Obat, vitamin, probiotik, dll.</small>
+        </div>
+
+        <div class="field">
+          <label for="biayaListrik">Biaya listrik/air/operasional (Rp)</label>
+          <input type="number" id="biayaListrik" value="800000" />
+          <small>Aerator, pompa, air, dan operasional lain.</small>
+        </div>
+
+        <div class="field">
+          <label for="biayaTenaga">Biaya tenaga kerja (Rp)</label>
+          <input type="number" id="biayaTenaga" value="1500000" />
+          <small>Kalau dikerjakan sendiri, tetap boleh kamu isi sebagai upah bayangan.</small>
+        </div>
+
+        <div class="field">
+          <label for="biayaLain">Biaya lain-lain (Rp)</label>
+          <input type="number" id="biayaLain" value="1000000" />
+          <small>Transport, panen, sewa alat, perbaikan, dll.</small>
+        </div>
+
+        <div class="field full">
+          <button onclick="hitungROI()">Hitung ROI</button>
+          <button class="secondary" onclick="resetForm()">Reset ke Angka Awal</button>
+        </div>
+      </div>
+
+      <div class="formula">
+        <strong>Formula inti:</strong><br>
+        Ikan hidup = jumlah bibit × survival rate<br>
+        Total berat panen = ikan hidup × berat rata-rata per ekor<br>
+        Omzet = total berat panen × harga jual per kg<br>
+        Total biaya = bibit + pakan + obat + listrik + tenaga kerja + biaya lain<br>
+        Laba bersih = omzet - total biaya<br>
+        ROI = laba bersih ÷ total biaya × 100%
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Hasil Perhitungan</h2>
+
+      <div class="result-box">
+        <h3>Total biaya</h3>
+        <div class="value" id="totalBiaya">Rp0</div>
+      </div>
+
+      <div class="result-box">
+        <h3>Estimasi omzet</h3>
+        <div class="value" id="omzet">Rp0</div>
+      </div>
+
+      <div class="result-box">
+        <h3>Laba / Rugi bersih</h3>
+        <div class="value" id="labaBersih">Rp0</div>
+      </div>
+
+      <div class="result-box">
+        <h3>ROI</h3>
+        <div class="value" id="roi">0%</div>
+      </div>
+
+      <div class="result-box">
+        <h3>Total ikan hidup saat panen</h3>
+        <div class="value" id="ikanHidup">0 ekor</div>
+      </div>
+
+      <div class="result-box">
+        <h3>Total berat panen</h3>
+        <div class="value" id="totalBerat">0 kg</div>
+      </div>
+
+      <div class="result-box">
+        <h3>BEP harga jual minimum</h3>
+        <div class="value" id="bepHarga">Rp0 / kg</div>
+      </div>
+
+      <div class="result-box">
+        <h3>Catatan singkat</h3>
+        <ul id="catatan">
+          <li>Isi data lalu klik Hitung ROI.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function formatRupiah(angka) {
+      return 'Rp' + Number(angka).toLocaleString('id-ID');
+    }
+
+    function hitungROI() {
+      const jumlahBibit = Number(document.getElementById('jumlahBibit').value) || 0;
+      const hargaBibit = Number(document.getElementById('hargaBibit').value) || 0;
+      const survivalRate = Number(document.getElementById('survivalRate').value) || 0;
+      const beratPanen = Number(document.getElementById('beratPanen').value) || 0;
+      const hargaJual = Number(document.getElementById('hargaJual').value) || 0;
+      const biayaPakan = Number(document.getElementById('biayaPakan').value) || 0;
+      const biayaObat = Number(document.getElementById('biayaObat').value) || 0;
+      const biayaListrik = Number(document.getElementById('biayaListrik').value) || 0;
+      const biayaTenaga = Number(document.getElementById('biayaTenaga').value) || 0;
+      const biayaLain = Number(document.getElementById('biayaLain').value) || 0;
+
+      const biayaBibit = jumlahBibit * hargaBibit;
+      const ikanHidup = jumlahBibit * (survivalRate / 100);
+      const totalBerat = ikanHidup * beratPanen;
+      const omzet = totalBerat * hargaJual;
+      const totalBiaya = biayaBibit + biayaPakan + biayaObat + biayaListrik + biayaTenaga + biayaLain;
+      const labaBersih = omzet - totalBiaya;
+      const roi = totalBiaya > 0 ? (labaBersih / totalBiaya) * 100 : 0;
+      const bepHarga = totalBerat > 0 ? totalBiaya / totalBerat : 0;
+
+      document.getElementById('totalBiaya').textContent = formatRupiah(totalBiaya);
+      document.getElementById('omzet').textContent = formatRupiah(omzet);
+
+      const labaEl = document.getElementById('labaBersih');
+      labaEl.textContent = formatRupiah(labaBersih);
+      labaEl.className = 'value ' + (labaBersih >= 0 ? 'good' : 'bad');
+
+      const roiEl = document.getElementById('roi');
+      roiEl.textContent = roi.toFixed(2) + '%';
+      roiEl.className = 'value ' + (roi >= 0 ? 'good' : 'bad');
+
+      document.getElementById('ikanHidup').textContent = Math.round(ikanHidup).toLocaleString('id-ID') + ' ekor';
+      document.getElementById('totalBerat').textContent = totalBerat.toFixed(2).toLocaleString('id-ID') + ' kg';
+      document.getElementById('bepHarga').textContent = formatRupiah(bepHarga.toFixed(0)) + ' / kg';
+
+      const catatan = [];
+      if (roi > 30) {
+        catatan.push('ROI terlihat menarik. Ini cukup sehat secara kasar, asalkan asumsi panen dan harga jual realistis.');
+      } else if (roi > 0) {
+        catatan.push('Masih untung, tapi belum terlalu tebal. Biasanya sensitif terhadap penurunan harga jual atau kenaikan biaya pakan.');
+      } else {
+        catatan.push('Simulasi ini rugi. Entah harga jual terlalu rendah, survival rate lemah, atau biaya pakan terlalu berat.');
+      }
+
+      if (survivalRate < 80) {
+        catatan.push('Survival rate di bawah 80% cukup berat. Fokus ke kualitas air, kepadatan tebar, dan pakan.');
+      }
+
+      if (bepHarga > hargaJual) {
+        catatan.push('Harga jual sekarang masih di bawah BEP. Secara sederhana: panen dengan asumsi ini belum layak.');
+      }
+
+      if (beratPanen < 0.3) {
+        catatan.push('Bobot panen per ekor masih kecil. Siklus panen atau efisiensi pertumbuhan perlu dievaluasi.');
+      }
+
+      document.getElementById('catatan').innerHTML = catatan.map(item => `<li>${item}</li>`).join('');
+    }
+
+    function resetForm() {
+      document.getElementById('jumlahBibit').value = 5000;
+      document.getElementById('hargaBibit').value = 350;
+      document.getElementById('survivalRate').value = 85;
+      document.getElementById('beratPanen').value = 0.45;
+      document.getElementById('hargaJual').value = 28000;
+      document.getElementById('biayaPakan').value = 18000000;
+      document.getElementById('biayaObat').value = 1200000;
+      document.getElementById('biayaListrik').value = 800000;
+      document.getElementById('biayaTenaga').value = 1500000;
+      document.getElementById('biayaLain').value = 1000000;
+      hitungROI();
+    }
+
+    hitungROI();
+  </script>
+</body>
+</html>
