@@ -5,179 +5,358 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kalkulator ROI Budidaya Ikan</title>
   <style>
+    :root {
+      --bg: #f2f7ff;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --primary: #0f766e;
+      --primary-soft: #ccfbf1;
+      --danger: #b91c1c;
+      --success: #047857;
+      --border: #dbe3ef;
+    }
+
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f4f7f9;
-      color: #1f2937;
-      padding: 24px;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top left, #dbeafe 0%, var(--bg) 30%, #f8fafc 100%);
+      color: var(--text);
+      padding: 18px;
     }
+
     .container {
-      max-width: 980px;
+      max-width: 1080px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 24px;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 18px;
+      align-items: start;
     }
+
     .card {
-      background: #fff;
-      border-radius: 16px;
+      background: var(--card);
+      border-radius: 18px;
       padding: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
     }
+
+    .header-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      background: #ecfeff;
+      color: #155e75;
+      border: 1px solid #a5f3fc;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 10px;
+      white-space: nowrap;
+    }
+
     h1 {
-      font-size: 28px;
-      margin-top: 0;
-      margin-bottom: 8px;
+      font-size: 27px;
+      margin: 0 0 6px;
     }
+
+    h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
     p.sub {
-      margin-top: 0;
-      color: #6b7280;
-      line-height: 1.5;
+      margin: 0 0 16px;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 14px;
     }
+
+    .preset-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .chip {
+      border: 1px solid #bfdbfe;
+      background: #eff6ff;
+      color: #1d4ed8;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .chip.active {
+      background: #dbeafe;
+      border-color: #60a5fa;
+    }
+
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 14px;
+      gap: 12px;
     }
+
     .field {
       display: flex;
       flex-direction: column;
       gap: 6px;
     }
+
     .field label {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
     }
-    .field input {
-      border: 1px solid #d1d5db;
+
+    .field input[type="number"] {
+      border: 1px solid #cbd5e1;
       border-radius: 10px;
-      padding: 12px;
+      padding: 11px;
       font-size: 15px;
       width: 100%;
+      background: #fff;
+      color: var(--text);
     }
+
+    .field input[type="range"] {
+      width: 100%;
+      accent-color: var(--primary);
+    }
+
     .field small {
-      color: #6b7280;
-      line-height: 1.4;
+      color: var(--muted);
+      line-height: 1.35;
+      font-size: 12px;
     }
+
+    .inline-help {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
     .full { grid-column: 1 / -1; }
+
+    .btn-group {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: 1fr 1fr;
+    }
+
     button {
       border: none;
       border-radius: 12px;
-      padding: 14px 18px;
-      font-size: 15px;
+      padding: 13px 14px;
+      font-size: 14px;
       font-weight: 700;
       cursor: pointer;
-      background: #0f766e;
-      color: white;
-      width: 100%;
+      transition: transform .12s ease, box-shadow .12s ease;
     }
+
+    button:hover { transform: translateY(-1px); }
+
+    .primary {
+      background: linear-gradient(135deg, var(--primary), #0ea5a5);
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(13, 148, 136, .3);
+    }
+
     .secondary {
-      background: #e5e7eb;
-      color: #111827;
-      margin-top: 10px;
+      background: #e2e8f0;
+      color: #0f172a;
     }
+
+    .summary-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+
+    .mini-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 10px;
+    }
+
+    .mini-box span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+
+    .mini-box strong { font-size: 15px; }
+
+    .result-wrap {
+      position: sticky;
+      top: 12px;
+    }
+
     .result-box {
-      padding: 14px;
+      padding: 12px;
       border-radius: 12px;
       background: #f8fafc;
-      border: 1px solid #e5e7eb;
-      margin-bottom: 12px;
+      border: 1px solid #e2e8f0;
+      margin-bottom: 10px;
     }
+
     .result-box h3 {
-      margin: 0 0 6px 0;
-      font-size: 14px;
-      color: #6b7280;
+      margin: 0 0 5px;
+      font-size: 13px;
+      color: var(--muted);
     }
+
     .value {
       font-size: 24px;
       font-weight: 800;
+      word-break: break-word;
     }
-    .good { color: #047857; }
-    .bad { color: #b91c1c; }
+
+    .good { color: var(--success); }
+    .bad { color: var(--danger); }
+
+    .meter {
+      width: 100%;
+      height: 11px;
+      border-radius: 999px;
+      background: #e2e8f0;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+
+    .meter-fill {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, #f59e0b, #10b981);
+      transition: width .3s ease;
+    }
+
     ul {
       margin: 10px 0 0;
       padding-left: 18px;
-      line-height: 1.7;
-    }
-    .formula {
-      background: #f9fafb;
-      border: 1px dashed #cbd5e1;
-      border-radius: 12px;
-      padding: 14px;
-      margin-top: 18px;
+      line-height: 1.6;
       font-size: 14px;
-      line-height: 1.7;
     }
-    @media (max-width: 860px) {
+
+    .formula {
+      background: #f8fafc;
+      border: 1px dashed #93c5fd;
+      border-radius: 12px;
+      padding: 13px;
+      margin-top: 14px;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #334155;
+    }
+
+    @media (max-width: 960px) {
       .container { grid-template-columns: 1fr; }
+      .result-wrap { position: static; }
+      .summary-strip { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 700px) {
+      body { padding: 12px; }
+      .card { padding: 14px; border-radius: 14px; }
+      h1 { font-size: 23px; }
       .grid { grid-template-columns: 1fr; }
       .full { grid-column: auto; }
+      .btn-group { grid-template-columns: 1fr; }
+      .value { font-size: 21px; }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="card">
-      <h1>Kalkulator ROI Budidaya Ikan</h1>
+      <div class="header-title">
+        <h1>Kalkulator ROI Budidaya Ikan</h1>
+        <span class="badge">Mobile-first • siap dipakai untuk APK WebView</span>
+      </div>
       <p class="sub">
-        Hitung modal, omzet, laba/rugi, ROI, BEP harga per kg, dan estimasi hasil panen. Cocok untuk simulasi nila, patin, gurame, lele, atau ikan lain.
+        UI dibuat lebih ramah pengguna: bisa auto-calculate, preset cepat, indikator kesehatan ROI,
+        dan layout yang nyaman di layar HP.
       </p>
 
-      <div class="grid">
+      <div class="preset-row" id="presetRow">
+        <button class="chip active" data-preset="lele">Preset Lele</button>
+        <button class="chip" data-preset="nila">Preset Nila</button>
+        <button class="chip" data-preset="patin">Preset Patin</button>
+      </div>
+
+      <div class="grid" id="formGrid">
         <div class="field">
           <label for="jumlahBibit">Jumlah bibit ditebar (ekor)</label>
           <input type="number" id="jumlahBibit" value="5000" />
-          <small>Total bibit saat awal tebar.</small>
+          <small>Total bibit awal siklus.</small>
         </div>
 
         <div class="field">
           <label for="hargaBibit">Harga bibit per ekor (Rp)</label>
           <input type="number" id="hargaBibit" value="350" />
-          <small>Contoh: Rp350 per ekor.</small>
+          <small>Contoh umum Rp250–Rp500/ekor.</small>
         </div>
 
         <div class="field">
           <label for="survivalRate">Survival rate (%)</label>
-          <input type="number" id="survivalRate" value="85" />
-          <small>Persentase ikan hidup sampai panen.</small>
+          <input type="number" id="survivalRate" min="0" max="100" value="85" />
+          <input type="range" id="survivalRateRange" min="0" max="100" value="85" />
+          <div class="inline-help"><span>Risiko tinggi &lt;80%</span><span id="survivalBadge">85%</span></div>
         </div>
 
         <div class="field">
           <label for="beratPanen">Berat panen rata-rata per ekor (kg)</label>
-          <input type="number" id="beratPanen" step="0.01" value="0.45" />
-          <small>Contoh: 0,45 kg per ekor.</small>
+          <input type="number" id="beratPanen" step="0.01" min="0" value="0.45" />
+          <input type="range" id="beratPanenRange" min="0.1" max="2" step="0.01" value="0.45" />
+          <div class="inline-help"><span>Target ideal menyesuaikan pasar</span><span id="beratBadge">0.45 kg</span></div>
         </div>
 
         <div class="field">
           <label for="hargaJual">Harga jual ikan per kg (Rp)</label>
           <input type="number" id="hargaJual" value="28000" />
-          <small>Harga jual saat panen.</small>
+          <small>Gunakan estimasi harga terendah agar lebih aman.</small>
         </div>
 
         <div class="field">
           <label for="biayaPakan">Total biaya pakan (Rp)</label>
           <input type="number" id="biayaPakan" value="18000000" />
-          <small>Akumulasi seluruh biaya pakan.</small>
+          <small>Komponen biaya terbesar, cek efisiensi FCR.</small>
         </div>
 
         <div class="field">
           <label for="biayaObat">Biaya obat/vitamin (Rp)</label>
           <input type="number" id="biayaObat" value="1200000" />
-          <small>Obat, vitamin, probiotik, dll.</small>
+          <small>Termasuk probiotik, suplemen, dan treatment.</small>
         </div>
 
         <div class="field">
           <label for="biayaListrik">Biaya listrik/air/operasional (Rp)</label>
           <input type="number" id="biayaListrik" value="800000" />
-          <small>Aerator, pompa, air, dan operasional lain.</small>
+          <small>Aerator, pompa, air, dan operasional harian.</small>
         </div>
 
         <div class="field">
           <label for="biayaTenaga">Biaya tenaga kerja (Rp)</label>
           <input type="number" id="biayaTenaga" value="1500000" />
-          <small>Kalau dikerjakan sendiri, tetap boleh kamu isi sebagai upah bayangan.</small>
+          <small>Boleh isi upah bayangan jika dikerjakan sendiri.</small>
         </div>
 
         <div class="field">
@@ -187,8 +366,10 @@
         </div>
 
         <div class="field full">
-          <button onclick="hitungROI()">Hitung ROI</button>
-          <button class="secondary" onclick="resetForm()">Reset ke Angka Awal</button>
+          <div class="btn-group">
+            <button class="primary" onclick="hitungROI()">Hitung ROI Sekarang</button>
+            <button class="secondary" onclick="resetForm()">Reset ke Angka Awal</button>
+          </div>
         </div>
       </div>
 
@@ -203,8 +384,28 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="card result-wrap">
       <h2>Hasil Perhitungan</h2>
+
+      <div class="summary-strip">
+        <div class="mini-box">
+          <span>Status ROI</span>
+          <strong id="statusROI">Menunggu input</strong>
+        </div>
+        <div class="mini-box">
+          <span>Margin laba</span>
+          <strong id="marginLaba">0%</strong>
+        </div>
+        <div class="mini-box">
+          <span>Risiko panen</span>
+          <strong id="risikoPanen">Normal</strong>
+        </div>
+      </div>
+
+      <div class="result-box">
+        <h3>Skor kesehatan usaha</h3>
+        <div class="meter"><div class="meter-fill" id="healthMeter"></div></div>
+      </div>
 
       <div class="result-box">
         <h3>Total biaya</h3>
@@ -251,21 +452,73 @@
   </div>
 
   <script>
+    const defaultValues = {
+      jumlahBibit: 5000,
+      hargaBibit: 350,
+      survivalRate: 85,
+      beratPanen: 0.45,
+      hargaJual: 28000,
+      biayaPakan: 18000000,
+      biayaObat: 1200000,
+      biayaListrik: 800000,
+      biayaTenaga: 1500000,
+      biayaLain: 1000000
+    };
+
+    const presets = {
+      lele: { ...defaultValues },
+      nila: {
+        jumlahBibit: 3500,
+        hargaBibit: 500,
+        survivalRate: 88,
+        beratPanen: 0.55,
+        hargaJual: 32000,
+        biayaPakan: 16500000,
+        biayaObat: 1400000,
+        biayaListrik: 900000,
+        biayaTenaga: 1500000,
+        biayaLain: 1200000
+      },
+      patin: {
+        jumlahBibit: 3000,
+        hargaBibit: 600,
+        survivalRate: 84,
+        beratPanen: 0.8,
+        hargaJual: 27000,
+        biayaPakan: 19000000,
+        biayaObat: 1300000,
+        biayaListrik: 950000,
+        biayaTenaga: 1800000,
+        biayaLain: 1600000
+      }
+    };
+
     function formatRupiah(angka) {
       return 'Rp' + Number(angka).toLocaleString('id-ID');
     }
 
+    function getNum(id) {
+      return Number(document.getElementById(id).value) || 0;
+    }
+
+    function syncBadges() {
+      const sr = getNum('survivalRate');
+      const bp = getNum('beratPanen');
+      document.getElementById('survivalBadge').textContent = `${sr.toFixed(0)}%`;
+      document.getElementById('beratBadge').textContent = `${bp.toFixed(2)} kg`;
+    }
+
     function hitungROI() {
-      const jumlahBibit = Number(document.getElementById('jumlahBibit').value) || 0;
-      const hargaBibit = Number(document.getElementById('hargaBibit').value) || 0;
-      const survivalRate = Number(document.getElementById('survivalRate').value) || 0;
-      const beratPanen = Number(document.getElementById('beratPanen').value) || 0;
-      const hargaJual = Number(document.getElementById('hargaJual').value) || 0;
-      const biayaPakan = Number(document.getElementById('biayaPakan').value) || 0;
-      const biayaObat = Number(document.getElementById('biayaObat').value) || 0;
-      const biayaListrik = Number(document.getElementById('biayaListrik').value) || 0;
-      const biayaTenaga = Number(document.getElementById('biayaTenaga').value) || 0;
-      const biayaLain = Number(document.getElementById('biayaLain').value) || 0;
+      const jumlahBibit = getNum('jumlahBibit');
+      const hargaBibit = getNum('hargaBibit');
+      const survivalRate = getNum('survivalRate');
+      const beratPanen = getNum('beratPanen');
+      const hargaJual = getNum('hargaJual');
+      const biayaPakan = getNum('biayaPakan');
+      const biayaObat = getNum('biayaObat');
+      const biayaListrik = getNum('biayaListrik');
+      const biayaTenaga = getNum('biayaTenaga');
+      const biayaLain = getNum('biayaLain');
 
       const biayaBibit = jumlahBibit * hargaBibit;
       const ikanHidup = jumlahBibit * (survivalRate / 100);
@@ -275,6 +528,7 @@
       const labaBersih = omzet - totalBiaya;
       const roi = totalBiaya > 0 ? (labaBersih / totalBiaya) * 100 : 0;
       const bepHarga = totalBerat > 0 ? totalBiaya / totalBerat : 0;
+      const marginLaba = omzet > 0 ? (labaBersih / omzet) * 100 : 0;
 
       document.getElementById('totalBiaya').textContent = formatRupiah(totalBiaya);
       document.getElementById('omzet').textContent = formatRupiah(omzet);
@@ -288,46 +542,104 @@
       roiEl.className = 'value ' + (roi >= 0 ? 'good' : 'bad');
 
       document.getElementById('ikanHidup').textContent = Math.round(ikanHidup).toLocaleString('id-ID') + ' ekor';
-      document.getElementById('totalBerat').textContent = totalBerat.toFixed(2).toLocaleString('id-ID') + ' kg';
-      document.getElementById('bepHarga').textContent = formatRupiah(bepHarga.toFixed(0)) + ' / kg';
+      document.getElementById('totalBerat').textContent = totalBerat.toLocaleString('id-ID', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' kg';
+      document.getElementById('bepHarga').textContent = formatRupiah(Math.round(bepHarga)) + ' / kg';
+
+      document.getElementById('marginLaba').textContent = `${marginLaba.toFixed(1)}%`;
+      document.getElementById('risikoPanen').textContent = survivalRate < 80 ? 'Tinggi' : (survivalRate < 88 ? 'Sedang' : 'Rendah');
+
+      let status = 'Perlu evaluasi';
+      if (roi > 30) status = 'Sangat menarik';
+      else if (roi > 10) status = 'Cukup sehat';
+      else if (roi > 0) status = 'Tipis';
+      document.getElementById('statusROI').textContent = status;
+
+      const healthScoreRaw = (roi * 1.5) + (survivalRate - 70) + (marginLaba * 0.7);
+      const healthScore = Math.max(0, Math.min(100, healthScoreRaw));
+      document.getElementById('healthMeter').style.width = `${healthScore}%`;
 
       const catatan = [];
       if (roi > 30) {
-        catatan.push('ROI terlihat menarik. Ini cukup sehat secara kasar, asalkan asumsi panen dan harga jual realistis.');
+        catatan.push('ROI terlihat menarik. Tetap amankan risiko dengan kontrak pembeli atau strategi jual bertahap.');
       } else if (roi > 0) {
-        catatan.push('Masih untung, tapi belum terlalu tebal. Biasanya sensitif terhadap penurunan harga jual atau kenaikan biaya pakan.');
+        catatan.push('Masih untung, namun margin belum tebal. Optimalkan pakan dan jaga kematian harian.');
       } else {
-        catatan.push('Simulasi ini rugi. Entah harga jual terlalu rendah, survival rate lemah, atau biaya pakan terlalu berat.');
+        catatan.push('Simulasi masih rugi. Fokus perbaiki harga jual, survival rate, dan efisiensi biaya pakan.');
       }
 
       if (survivalRate < 80) {
-        catatan.push('Survival rate di bawah 80% cukup berat. Fokus ke kualitas air, kepadatan tebar, dan pakan.');
+        catatan.push('Survival rate di bawah 80% cukup berisiko. Cek kualitas air, padat tebar, dan protokol kesehatan.');
       }
 
       if (bepHarga > hargaJual) {
-        catatan.push('Harga jual sekarang masih di bawah BEP. Secara sederhana: panen dengan asumsi ini belum layak.');
+        catatan.push('Harga jual sekarang masih di bawah BEP, artinya asumsi ini belum layak panen untuk profit.');
       }
 
       if (beratPanen < 0.3) {
-        catatan.push('Bobot panen per ekor masih kecil. Siklus panen atau efisiensi pertumbuhan perlu dievaluasi.');
+        catatan.push('Bobot panen per ekor masih kecil. Pertimbangkan perpanjangan siklus atau perbaikan manajemen pakan.');
+      }
+
+      if (!catatan.length) {
+        catatan.push('Perhitungan stabil. Lanjutkan monitoring biaya aktual agar hasil simulasi tetap relevan.');
       }
 
       document.getElementById('catatan').innerHTML = catatan.map(item => `<li>${item}</li>`).join('');
+      syncBadges();
+    }
+
+    function applyValues(values) {
+      Object.entries(values).forEach(([id, val]) => {
+        const el = document.getElementById(id);
+        if (el) el.value = val;
+      });
+      document.getElementById('survivalRateRange').value = values.survivalRate;
+      document.getElementById('beratPanenRange').value = values.beratPanen;
+      hitungROI();
     }
 
     function resetForm() {
-      document.getElementById('jumlahBibit').value = 5000;
-      document.getElementById('hargaBibit').value = 350;
-      document.getElementById('survivalRate').value = 85;
-      document.getElementById('beratPanen').value = 0.45;
-      document.getElementById('hargaJual').value = 28000;
-      document.getElementById('biayaPakan').value = 18000000;
-      document.getElementById('biayaObat').value = 1200000;
-      document.getElementById('biayaListrik').value = 800000;
-      document.getElementById('biayaTenaga').value = 1500000;
-      document.getElementById('biayaLain').value = 1000000;
-      hitungROI();
+      applyValues(defaultValues);
+      setActivePreset('lele');
     }
+
+    function setActivePreset(name) {
+      document.querySelectorAll('.chip').forEach(chip => {
+        chip.classList.toggle('active', chip.dataset.preset === name);
+      });
+    }
+
+    document.getElementById('presetRow').addEventListener('click', (e) => {
+      const btn = e.target.closest('.chip');
+      if (!btn) return;
+      const presetName = btn.dataset.preset;
+      if (!presets[presetName]) return;
+      setActivePreset(presetName);
+      applyValues(presets[presetName]);
+    });
+
+    const syncPairs = [
+      ['survivalRate', 'survivalRateRange', 0],
+      ['beratPanen', 'beratPanenRange', 2]
+    ];
+
+    syncPairs.forEach(([numId, rangeId, decimals]) => {
+      const num = document.getElementById(numId);
+      const range = document.getElementById(rangeId);
+      num.addEventListener('input', () => {
+        range.value = num.value || 0;
+        if (decimals === 0) num.value = Math.min(100, Math.max(0, Number(num.value) || 0));
+        hitungROI();
+      });
+      range.addEventListener('input', () => {
+        num.value = Number(range.value).toFixed(decimals);
+        hitungROI();
+      });
+    });
+
+    document.querySelectorAll('#formGrid input[type="number"]').forEach(input => {
+      if (['survivalRate', 'beratPanen'].includes(input.id)) return;
+      input.addEventListener('input', hitungROI);
+    });
 
     hitungROI();
   </script>
