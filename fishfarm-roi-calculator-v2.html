@@ -448,15 +448,31 @@ header{border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-i
 .logo span{color:var(--text3);font-weight:400;font-size:12px}
 .hbadge{font-family:var(--mono);font-size:9px;padding:3px 9px;border:1px solid var(--border2);border-radius:3px;color:var(--text2);letter-spacing:0.1em;text-transform:uppercase}
 
-.hero{padding:3.5rem 2rem 2.5rem;max-width:960px;margin:0 auto;position:relative;z-index:1}
+.hero{padding:3.5rem 2rem 2.5rem;max-width:1120px;margin:0 auto;position:relative;z-index:1}
+.hero::after{content:'';position:absolute;right:2rem;top:1.4rem;width:220px;height:220px;background:radial-gradient(circle,rgba(90,171,255,0.14),transparent 60%);filter:blur(10px);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(280px,.7fr);gap:1.2rem;align-items:end}
 .eyebrow{font-family:var(--mono);font-size:10px;color:var(--green);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:.85rem;display:flex;align-items:center;gap:10px}
 .eyebrow::before{content:'';display:block;width:20px;height:1px;background:var(--green)}
 h1{font-size:clamp(26px,4.5vw,42px);font-weight:700;line-height:1.12;letter-spacing:-0.025em;margin-bottom:.9rem}
 h1 em{font-style:normal;color:var(--green)}
-.hero-sub{font-size:14px;color:var(--text2);max-width:500px;line-height:1.75}
+.hero-sub{font-size:14px;color:var(--text2);max-width:560px;line-height:1.75;margin-bottom:1.1rem}
+.hero-pills{display:flex;flex-wrap:wrap;gap:8px}
+.hero-pill{padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,0.02);font-size:10px;font-family:var(--mono);letter-spacing:.05em;color:var(--text2)}
+.hero-card{background:linear-gradient(180deg,rgba(23,32,25,0.96),rgba(15,20,16,0.96));border:1px solid rgba(90,171,255,0.18);border-radius:18px;padding:18px;box-shadow:0 18px 50px rgba(0,0,0,0.22)}
+.hero-card-label{font-size:10px;font-family:var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0 14px}
+.hero-stat{padding:12px;border-radius:12px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.04)}
+.hero-stat .k{display:block;font-size:9px;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--text3);margin-bottom:6px}
+.hero-stat .v{display:block;font-family:var(--mono);font-size:18px;font-weight:700;color:var(--text)}
+.hero-note{font-size:12px;color:var(--text2);line-height:1.7}
+.quick-grid{max-width:1120px;margin:0 auto;padding:0 2rem 1.4rem;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;position:relative;z-index:1}
+.quick-card{background:rgba(23,32,25,0.85);border:1px solid var(--border);border-radius:14px;padding:14px 16px;box-shadow:0 10px 32px rgba(0,0,0,0.16)}
+.quick-card .ql{display:block;font-size:9px;font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-bottom:7px}
+.quick-card .qv{display:block;font-family:var(--mono);font-size:18px;font-weight:700;color:var(--text)}
+.quick-card .qs{display:block;font-size:11px;color:var(--text2);margin-top:5px}
 
-.main{max-width:960px;margin:0 auto;padding:0 2rem 5rem;display:grid;grid-template-columns:1fr 360px;gap:1.5rem;align-items:start;position:relative;z-index:1}
-@media(max-width:760px){.main{grid-template-columns:1fr}}
+.main{max-width:1120px;margin:0 auto;padding:0 2rem 5rem;display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:1.5rem;align-items:start;position:relative;z-index:1}
+@media(max-width:920px){.hero-grid,.quick-grid,.main{grid-template-columns:1fr}.hero-card{order:-1}.quick-grid{padding-top:0}.hero::after{display:none}}
 
 .panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden}
 .panel-hd{padding:13px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:var(--bg3);gap:10px;flex-wrap:wrap}
@@ -538,6 +554,16 @@ h1 em{font-style:normal;color:var(--green)}
 .payback-row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;padding-top:10px;border-top:1px solid var(--border);margin-top:4px}
 .payback-info{font-size:11px;color:var(--text2)}
 .payback-val{font-family:var(--mono);font-weight:600;color:var(--text);margin-left:4px}
+.insight-box{margin:14px 0 0;padding:14px;border-radius:14px;background:linear-gradient(180deg,rgba(90,171,255,0.08),rgba(167,139,250,0.05));border:1px solid rgba(90,171,255,0.18)}
+.insight-title{font-size:10px;font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.insight-main{font-size:13px;font-weight:700;color:var(--text);margin-bottom:8px;line-height:1.5}
+.insight-list{display:flex;flex-direction:column;gap:7px}
+.insight-item{font-size:11.5px;color:var(--text2);line-height:1.6;padding-left:14px;position:relative}
+.insight-item::before{content:'';position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:50%;background:var(--green)}
+.validation-banner{margin-top:14px;padding:11px 12px;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,0.02);font-size:11px;color:var(--text2);line-height:1.6}
+.validation-banner strong{color:var(--text)}
+.validation-banner.warn{border-color:rgba(224,160,32,0.25);background:rgba(224,160,32,0.08);color:#f0d38e}
+.validation-banner.good{border-color:rgba(52,211,112,0.22);background:rgba(52,211,112,0.08)}
 
 .pdf-btn{display:flex;align-items:center;gap:8px;width:100%;padding:12px 16px;margin-top:14px;font-size:11px;font-family:var(--mono);font-weight:600;letter-spacing:0.07em;text-transform:uppercase;border:1px solid var(--border3);border-radius:var(--radius);background:var(--green-pale);color:var(--green);cursor:pointer;transition:all .18s;justify-content:center}
 .pdf-btn:hover{background:var(--green-pale2);border-color:var(--green);box-shadow:0 0 20px rgba(52,211,112,0.07)}
@@ -560,9 +586,35 @@ footer span{color:var(--green)}
 </header>
 
 <div class="hero">
-  <div class="eyebrow">Aquaculture Division</div>
-  <h1>Hitung <em>profitabilitas</em><br>budidaya ikan tilapia</h1>
-  <p class="hero-sub">Proyeksi ROI, analisis biaya, dan pembagian keuntungan untuk semua mitra secara real-time.</p>
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow">Aquaculture Division</div>
+      <h1>Hitung <em>profitabilitas</em><br>budidaya ikan tilapia</h1>
+      <p class="hero-sub">Proyeksi ROI, analisis biaya, dan pembagian keuntungan untuk semua mitra secara real-time. Tampilan baru dibuat lebih profesional, cepat dibaca, dan siap dipakai saat presentasi ke calon investor atau partner lapangan.</p>
+      <div class="hero-pills">
+        <span class="hero-pill">Live scenario planner</span>
+        <span class="hero-pill">Mobile-friendly layout</span>
+        <span class="hero-pill">Formal financial PDF</span>
+      </div>
+    </div>
+    <aside class="hero-card">
+      <div class="hero-card-label">Snapshot Siklus</div>
+      <div class="hero-stats">
+        <div class="hero-stat"><span class="k">Estimasi Panen</span><span class="v" id="heroHarvest">—</span></div>
+        <div class="hero-stat"><span class="k">Biaya / Kg</span><span class="v" id="heroCostPerKg">—</span></div>
+        <div class="hero-stat"><span class="k">Harga Impas</span><span class="v" id="heroBreakEvenPrice">—</span></div>
+        <div class="hero-stat"><span class="k">Siklus / Tahun</span><span class="v" id="heroCycles">—</span></div>
+      </div>
+      <div class="hero-note" id="heroNote">Sistem akan merangkum kondisi bisnis terbaru secara otomatis setelah input diubah.</div>
+    </aside>
+  </div>
+</div>
+
+<div class="quick-grid">
+  <div class="quick-card"><span class="ql">Modal Terpakai</span><span class="qv" id="quickCapitalUse">—</span><span class="qs">Proporsi total biaya terhadap modal usaha.</span></div>
+  <div class="quick-card"><span class="ql">Pakan Dominan</span><span class="qv" id="quickFeedShare">—</span><span class="qs">Porsi biaya pakan dalam struktur operasional.</span></div>
+  <div class="quick-card"><span class="ql">Laba / Ekor Panen</span><span class="qv" id="quickProfitFish">—</span><span class="qs">Rata-rata profit bersih per ekor yang berhasil dipanen.</span></div>
+  <div class="quick-card"><span class="ql">Catatan Bisnis</span><span class="qv" id="quickBusinessTag">—</span><span class="qs" id="quickBusinessNote">Analisis singkat akan muncul di sini.</span></div>
 </div>
 
 <div class="main">
@@ -660,6 +712,14 @@ footer span{color:var(--green)}
           <div class="payback-info">Break-even modal: <span class="payback-val" id="payback">—</span></div>
         </div>
 
+        <div class="insight-box">
+          <div class="insight-title">Business Insight</div>
+          <div class="insight-main" id="insightHeadline">—</div>
+          <div class="insight-list" id="insightList"></div>
+        </div>
+
+        <div class="validation-banner" id="validationBanner">Periksa kembali data input untuk mendapatkan hasil proyeksi yang akurat.</div>
+
         <button class="pdf-btn" id="pdfBtn" onclick="exportPDF()">
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v1"/><rect x="4" y="6" width="10" height="9" rx="1"/><path d="M8 9v3M6.5 10.5 8 12l1.5-1.5"/></svg>
           Export PDF — Financial Report
@@ -678,57 +738,155 @@ const fmtS = v => { const a=Math.abs(v); if(a>=1e9)return 'Rp '+(v/1e9).toFixed(
 const $  = id => document.getElementById(id);
 const PCOLORS = ['#34d370','#5aabff','#e0a020','#a78bfa','#f06060','#34d3c4','#f0a050','#ff7eb3'];
 const TYPES   = {pengelola:'Pengelola',investor:'Investor',mitra:'Mitra Bisnis',bank:'Bank / Kreditur',lainnya:'Lainnya'};
+const INPUT_RULES = {
+  fishCount:{min:0}, survivalRate:{min:0,max:100}, harvestWeight:{min:0}, sellPrice:{min:0}, fcr:{min:0}, feedPrice:{min:0},
+  fingerlingCost:{min:0}, cycleDays:{min:1,fallback:1}, laborCost:{min:0}, otherCost:{min:0}, totalCapital:{min:0}
+};
 let partners  = [{id:1,name:'Ariefz',type:'pengelola',pct:70},{id:2,name:'Investor A',type:'investor',pct:30}];
 let nextId    = 3;
 let lastCalc  = {};
+
+function clampNumber(value, rule={}){
+  let num = Number(value);
+  if(!Number.isFinite(num)) num = rule.fallback ?? 0;
+  if(rule.min !== undefined) num = Math.max(rule.min, num);
+  if(rule.max !== undefined) num = Math.min(rule.max, num);
+  return num;
+}
+
+function readNumber(id){
+  const el = $(id);
+  const rule = INPUT_RULES[id] || {};
+  const num = clampNumber(el.value, rule);
+  if(el.value !== '' && Number(el.value) !== num) el.value = num;
+  return num;
+}
 
 function renderPartners(){
   $('partnerRows').innerHTML = partners.map((p,i) => `
     <div class="partner-row">
       <input type="text" value="${p.name}" placeholder="Nama mitra" oninput="upd(${p.id},'name',this.value)" style="font-family:var(--sans);font-size:12px;font-weight:500">
       <select onchange="upd(${p.id},'type',this.value)">${Object.entries(TYPES).map(([k,v])=>`<option value="${k}"${p.type===k?' selected':''}>${v}</option>`).join('')}</select>
-      <input type="number" value="${p.pct}" min="0" max="100" step="0.5" style="text-align:right" oninput="upd(${p.id},'pct',+this.value)">
+      <input type="number" value="${p.pct}" min="0" max="100" step="0.5" style="text-align:right" oninput="upd(${p.id},'pct',this.value)">
       <button class="del-btn" onclick="delP(${p.id})"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="4" x2="12" y2="12"/><line x1="12" y1="4" x2="4" y2="12"/></svg></button>
     </div>`).join('');
   validatePct(); calc();
 }
-function upd(id,key,val){ const p=partners.find(x=>x.id===id); if(p){p[key]=key==='pct'?+val:val;} validatePct(); calc(); }
+function upd(id,key,val){ const p=partners.find(x=>x.id===id); if(!p) return; p[key]=key==='pct'?clampNumber(val,{min:0,max:100}):val; validatePct(); calc(); }
 function addPartner(){ partners.push({id:nextId++,name:'Mitra Baru',type:'mitra',pct:0}); renderPartners(); }
 function delP(id){ if(partners.length<=1)return; partners=partners.filter(p=>p.id!==id); renderPartners(); }
 function validatePct(){ const tot=partners.reduce((s,p)=>s+p.pct,0); $('pctTotal').textContent=tot.toFixed(1); $('pctWarn').classList.toggle('show',Math.abs(tot-100)>0.5); return Math.abs(tot-100)<=0.5; }
 
+function buildInsights(data){
+  const notes = [];
+  if(data.roi > 35) notes.push('ROI sudah tinggi. Fokus utama adalah menjaga survival rate dan disiplin kualitas air agar profit tetap stabil.');
+  else if(data.roi > 0) notes.push('Usaha masih profit, tetapi ruang perbaikan terbesar ada pada efisiensi pakan dan harga jual rata-rata panen.');
+  else notes.push('Simulasi masih rugi. Prioritaskan evaluasi FCR, survival rate, dan harga jual sebelum menambah volume tebar.');
+
+  if(data.feedShare >= 45) notes.push('Biaya pakan mendominasi struktur biaya. Negosiasi harga pakan atau perbaikan FCR akan paling berdampak.');
+  else notes.push('Komposisi biaya cukup seimbang. Pastikan biaya non-pakan tetap terkontrol saat skala usaha naik.');
+
+  notes.push((isFinite(data.payback) ? 'Perkiraan balik modal sekitar '+data.payback.toFixed(1)+' siklus.' : 'Balik modal belum dapat dihitung karena porsi profit pengelola belum positif.') + ' Gunakan angka ini saat berdiskusi dengan investor atau partner operasional.');
+
+  const headline = data.netProfit >= 0
+    ? 'Usaha diproyeksikan menghasilkan '+fmtS(data.netProfit)+' per siklus dengan margin '+data.margin.toFixed(1)+'%.'
+    : 'Usaha diproyeksikan masih defisit '+fmtS(Math.abs(data.netProfit))+' per siklus dan perlu penyesuaian asumsi.';
+
+  return {headline, notes};
+}
+
+function updateNarrative(data){
+  $('heroHarvest').textContent = data.totalKg ? data.totalKg.toFixed(0)+' kg' : '—';
+  $('heroCostPerKg').textContent = data.costPerKg ? fmtS(data.costPerKg) : '—';
+  $('heroBreakEvenPrice').textContent = data.breakEvenPrice ? fmtS(data.breakEvenPrice) : '—';
+  $('heroCycles').textContent = data.cyclesPerYr.toFixed(1)+'x';
+  $('heroNote').textContent = data.netProfit >= 0
+    ? 'Skenario aktif menunjukkan proyeksi laba bersih '+fmt(data.netProfit)+' per siklus dengan titik impas harga jual sekitar '+fmt(Math.round(data.breakEvenPrice))+'/kg.'
+    : 'Skenario aktif masih berada di bawah titik impas. Naikkan harga jual, survival rate, atau turunkan FCR untuk membuat proyek lebih sehat.';
+
+  $('quickCapitalUse').textContent = data.cap ? data.capitalUsedPct.toFixed(1)+'%' : '—';
+  $('quickFeedShare').textContent = data.feedShare.toFixed(1)+'%';
+  $('quickProfitFish').textContent = data.harvestFish ? fmtS(data.profitPerFish) : '—';
+  $('quickBusinessTag').textContent = data.roi > 30 ? 'Sehat' : data.roi > 0 ? 'Perlu Optimasi' : 'Perlu Revisi';
+  $('quickBusinessNote').textContent = data.breakEvenPrice
+    ? 'Harga jual minimal agar impas sekitar '+fmt(Math.round(data.breakEvenPrice))+'/kg.'
+    : 'Lengkapi asumsi biaya dan produksi untuk melihat batas impas.';
+
+  const insight = buildInsights(data);
+  $('insightHeadline').textContent = insight.headline;
+  $('insightList').innerHTML = insight.notes.map(note => `<div class="insight-item">${note}</div>`).join('');
+
+  const pctOk = validatePct();
+  const banner = $('validationBanner');
+  const warnings = [];
+  if(!pctOk) warnings.push('Total porsi mitra harus tepat 100%.');
+  if(data.surv < 0.7) warnings.push('Tingkat hidup di bawah 70% membuat risiko budidaya tinggi.');
+  if(data.fcr > 1.6) warnings.push('FCR di atas 1.6 menandakan konsumsi pakan perlu diperbaiki.');
+  if(data.cap > 0 && data.totalCost > data.cap) warnings.push('Biaya operasional per siklus melebihi modal usaha yang tersedia.');
+  if(data.cycle > 180) warnings.push('Durasi siklus cukup panjang; cek arus kas dan kebutuhan modal kerja.');
+
+  if(warnings.length){
+    banner.className = 'validation-banner warn';
+    banner.innerHTML = '<strong>Perlu perhatian:</strong> '+warnings.join(' ');
+  } else {
+    banner.className = 'validation-banner good';
+    banner.innerHTML = '<strong>Data terlihat sehat.</strong> Asumsi utama sudah konsisten dan siap diekspor ke PDF formal.';
+  }
+}
+
 function calc(){
-  const fish  = +$('fishCount').value||0, surv=(+$('survivalRate').value||0)/100, hw=+$('harvestWeight').value||0;
-  const sp    = +$('sellPrice').value||0, fp=+$('fingerlingCost').value||0, fcr=+$('fcr').value||0;
-  const feedP = +$('feedPrice').value||0, labor=+$('laborCost').value||0, other=+$('otherCost').value||0;
-  const cycle = +$('cycleDays').value||1, cap=+$('totalCapital').value||0;
+  const fish = readNumber('fishCount');
+  const surv = readNumber('survivalRate')/100;
+  const hw = readNumber('harvestWeight');
+  const sp = readNumber('sellPrice');
+  const fp = readNumber('fingerlingCost');
+  const fcr = readNumber('fcr');
+  const feedP = readNumber('feedPrice');
+  const labor = readNumber('laborCost');
+  const other = readNumber('otherCost');
+  const cycle = readNumber('cycleDays');
+  const cap = readNumber('totalCapital');
 
-  const harvestFish=fish*surv, totalKg=harvestFish*hw, revenue=totalKg*sp;
-  const fingerlingT=fish*fp, feedNeeded=totalKg*fcr, feedCost=feedNeeded*feedP;
-  const laborT=labor*(cycle/30), totalCost=fingerlingT+feedCost+laborT+other;
-  const netProfit=revenue-totalCost, roi=totalCost>0?(netProfit/totalCost)*100:0;
-  const margin=revenue>0?(netProfit/revenue)*100:0, cyclesPerYr=365/cycle, annualProfit=netProfit*cyclesPerYr;
+  const harvestFish = fish * surv;
+  const totalKg = harvestFish * hw;
+  const revenue = totalKg * sp;
+  const fingerlingT = fish * fp;
+  const feedNeeded = totalKg * fcr;
+  const feedCost = feedNeeded * feedP;
+  const laborT = labor * (cycle/30);
+  const totalCost = fingerlingT + feedCost + laborT + other;
+  const netProfit = revenue - totalCost;
+  const roi = totalCost>0 ? (netProfit/totalCost)*100 : 0;
+  const margin = revenue>0 ? (netProfit/revenue)*100 : 0;
+  const cyclesPerYr = cycle>0 ? 365/cycle : 0;
+  const annualProfit = netProfit * cyclesPerYr;
+  const costPerKg = totalKg>0 ? totalCost/totalKg : 0;
+  const breakEvenPrice = totalKg>0 ? totalCost/totalKg : 0;
+  const profitPerFish = harvestFish>0 ? netProfit/harvestFish : 0;
+  const feedShare = totalCost>0 ? (feedCost/totalCost)*100 : 0;
+  const capitalUsedPct = cap>0 ? (totalCost/cap)*100 : 0;
 
-  const partnerSplits=partners.map(p=>({...p,profit:netProfit*(p.pct/100),annualProfit:annualProfit*(p.pct/100)}));
-  const ownerSh=(partners.find(p=>p.type==='pengelola')?.pct||0)/100;
-  const ownerProfit=netProfit*ownerSh, payback=ownerProfit>0?cap/ownerProfit:Infinity;
+  const partnerSplits = partners.map(p=>({...p,profit:netProfit*(p.pct/100),annualProfit:annualProfit*(p.pct/100)}));
+  const ownerSh = (partners.find(p=>p.type==='pengelola')?.pct||0)/100;
+  const ownerProfit = netProfit*ownerSh;
+  const payback = ownerProfit>0 ? cap/ownerProfit : Infinity;
 
-  lastCalc={fish,surv,hw,sp,fp,fcr,feedP,labor,other,cycle,cap,harvestFish,totalKg,revenue,
+  lastCalc = {fish,surv,hw,sp,fp,fcr,feedP,labor,other,cycle,cap,harvestFish,totalKg,revenue,
     fingerlingT,feedNeeded,feedCost,laborT,totalCost,netProfit,roi,margin,cyclesPerYr,
-    annualProfit,partnerSplits,payback,ownerName:$('ownerName').value||'Pengelola'};
+    annualProfit,partnerSplits,payback,ownerName:$('ownerName').value||'Pengelola', costPerKg, breakEvenPrice, profitPerFish, feedShare, capitalUsedPct};
 
-  $('mRevenue').textContent=fmtS(revenue);
-  const pe=$('mProfit');pe.textContent=fmtS(netProfit);pe.className='mval '+(netProfit>0?'pos':'neg');
-  const re=$('mROI');re.textContent=roi.toFixed(1)+'%';re.className='mval '+(roi>30?'pos':roi>0?'warn':'neg');
-  const me=$('mMargin');me.textContent=margin.toFixed(1)+'%';me.className='mval '+(margin>20?'pos':margin>0?'warn':'neg');
+  $('mRevenue').textContent = fmtS(revenue);
+  const pe=$('mProfit'); pe.textContent=fmtS(netProfit); pe.className='mval '+(netProfit>0?'pos':'neg');
+  const re=$('mROI'); re.textContent=roi.toFixed(1)+'%'; re.className='mval '+(roi>30?'pos':roi>0?'warn':'neg');
+  const me=$('mMargin'); me.textContent=margin.toFixed(1)+'%'; me.className='mval '+(margin>20?'pos':margin>0?'warn':'neg');
 
   $('bRevenue').textContent=fmt(revenue);
   $('bFingerling').textContent='− '+fmt(fingerlingT);
   $('bFeed').textContent='− '+fmt(feedCost);
   $('bLabor').textContent='− '+fmt(laborT);
   $('bOther').textContent='− '+fmt(other);
-  const ne=$('bNet');ne.textContent=(netProfit>=0?'+':'')+fmt(netProfit);ne.className='bval '+(netProfit>=0?'pos':'neg');
-  $('bAnnual').textContent='+'+fmt(annualProfit)+' ('+cyclesPerYr.toFixed(1)+'x/yr)';
+  const ne=$('bNet'); ne.textContent=(netProfit>=0?'+':'')+fmt(netProfit); ne.className='bval '+(netProfit>=0?'pos':'neg');
+  $('bAnnual').textContent=(annualProfit>=0?'+':'')+fmt(annualProfit)+' ('+cyclesPerYr.toFixed(1)+'x/yr)';
 
   const costs=[{l:'Benih',v:fingerlingT,c:'#34d370'},{l:'Pakan',v:feedCost,c:'#5aabff'},{l:'Tenaga Kerja',v:laborT,c:'#e0a020'},{l:'Lain-lain',v:other,c:'#4d6652'}];
   $('costChart').innerHTML=costs.map(c=>{const p=totalCost>0?(c.v/totalCost*100):0;return`<div class="bar-row"><span class="bar-lbl">${c.l}</span><div class="bar-track"><div class="bar-fill" style="width:${p.toFixed(1)}%;background:${c.c}"></div></div><span class="bar-pct">${p.toFixed(0)}%</span></div>`;}).join('');
@@ -738,6 +896,8 @@ function calc(){
   $('payback').textContent=isFinite(payback)?payback.toFixed(1)+' siklus':'∞';
   const ht=$('healthTag');
   if(roi>30){ht.textContent='Profitable';ht.className='tag good'}else if(roi>0){ht.textContent='Marginal';ht.className='tag warn'}else{ht.textContent='Rugi';ht.className='tag bad'}
+
+  updateNarrative(lastCalc);
 }
 
 const SCEN={
@@ -746,7 +906,7 @@ const SCEN={
   pessimistic:{fishCount:10000,survivalRate:75, harvestWeight:0.30,sellPrice:19000,fingerlingCost:550,fcr:1.8,feedPrice:11000,cycleDays:140,laborCost:1500000,otherCost:700000,totalCapital:20000000},
 };
 function loadScenario(name,btn){const s=SCEN[name];for(const k in s){const el=$(k);if(el)el.value=s[k]}document.querySelectorAll('.sc-btn').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');calc();}
-function resetAll(){['fishCount','survivalRate','harvestWeight','sellPrice','fcr','feedPrice','fingerlingCost','cycleDays','laborCost','otherCost','totalCapital'].forEach(id=>{const el=$(id);if(el)el.value=''});document.querySelectorAll('.sc-btn').forEach(b=>b.classList.remove('active'));['mRevenue','mProfit','mROI','mMargin','bRevenue','bFingerling','bFeed','bLabor','bOther','bNet','bAnnual','payback'].forEach(id=>{const el=$(id);if(el)el.textContent='—'});$('costChart').innerHTML='';$('splitList').innerHTML='';const ht=$('healthTag');ht.textContent='—';ht.className='tag';}
+function resetAll(){['fishCount','survivalRate','harvestWeight','sellPrice','fcr','feedPrice','fingerlingCost','cycleDays','laborCost','otherCost','totalCapital'].forEach(id=>{const el=$(id);if(el)el.value=''});document.querySelectorAll('.sc-btn').forEach(b=>b.classList.remove('active'));calc();}
 
 document.querySelectorAll('#fishCount,#survivalRate,#harvestWeight,#sellPrice,#fcr,#feedPrice,#fingerlingCost,#cycleDays,#laborCost,#otherCost,#totalCapital').forEach(i=>i.addEventListener('input',calc));
 $('ownerName').addEventListener('input',calc);
@@ -881,7 +1041,7 @@ function buildPDF(jsPDFLib){
   var W=210, H=297, ML=15, MR=15, CW=W-ML-MR;
   function rp(v){ return 'Rp '+Math.round(v).toLocaleString('id-ID'); }
   var health = d.roi>30?'PROFITABLE':d.roi>0?'MARGINAL':'RUGI';
-  var hRGB   = d.roi>30?[52,211,112]:d.roi>0?[224,160,32]:[240,96,96];
+  doc.setProperties({title:'Laporan Keuangan Budidaya Ikan', subject:'Proyeksi ROI dan analisis usaha budidaya ikan', author:'ARIEFZ Fish Farm ROI Calculator'});
 
   // Corporate formal palette — navy / white / grey
   var DARK=[15,40,80];      // deep navy (header bg)
@@ -938,6 +1098,20 @@ function buildPDF(jsPDFLib){
   doc.line(0,41,W,41);
 
   var y = 50;
+
+  // ── EXECUTIVE SUMMARY ──
+  y = sHead('RINGKASAN EKSEKUTIF', y, 'Untuk investor dan pengelola');
+  var summaryText = [
+    'Usaha budidaya memproyeksikan pendapatan kotor '+rp(d.revenue)+' per siklus dengan laba bersih '+rp(d.netProfit)+'.',
+    'Biaya operasional per kilogram diperkirakan '+rp(d.costPerKg)+'/kg dengan harga impas sekitar '+rp(d.breakEvenPrice)+'/kg.',
+    isFinite(d.payback) ? 'Periode balik modal estimatif '+d.payback.toFixed(1)+' siklus atau sekitar '+Math.round(d.payback*d.cycle)+' hari.' : 'Periode balik modal belum dapat ditentukan karena bagian laba pengelola belum positif.'
+  ];
+  doc.setFillColor(255,255,255); doc.roundedRect(ML,y,CW,22,1.5,1.5,'F');
+  doc.setDrawColor(210,218,228); doc.setLineWidth(0.3); doc.roundedRect(ML,y,CW,22,1.5,1.5,'S');
+  doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(TEXT[0],TEXT[1],TEXT[2]);
+  var summaryLines = doc.splitTextToSize(summaryText.join(' '), CW-8);
+  doc.text(summaryLines, ML+4, y+6);
+  y += 29;
 
   // ── KPI SUMMARY BOXES — formal style ──
   var kpis = [
@@ -1089,6 +1263,21 @@ function buildPDF(jsPDFLib){
   });
   if(y > H-80){ doc.addPage(); y=16; }
 
+  // ── ANALISIS HARGA & EFISIENSI ──
+  y = sHead('ANALISIS HARGA & EFISIENSI', y);
+  y = tbl(y, ['METRIK','NILAI','CATATAN'], [
+    ['Biaya operasional per kg', rp(d.costPerKg)+'/kg', 'Menjadi dasar evaluasi efisiensi panen'],
+    ['Harga jual impas', rp(d.breakEvenPrice)+'/kg', 'Harga minimum agar laba = 0'],
+    ['Profit bersih per ekor panen', rp(d.profitPerFish)+'/ekor', 'Berguna untuk evaluasi kepadatan tebar'],
+    ['Share biaya pakan', d.feedShare.toFixed(1)+'%', d.feedShare>45?'Pakan sangat dominan':'Masih cukup terkontrol'],
+    ['Penggunaan modal kerja', d.capitalUsedPct.toFixed(1)+'%', d.cap>0?'Dibanding modal total tersedia':'Modal belum diisi']
+  ], {
+    0:{cellWidth:CW*0.34, textColor:MUTED},
+    1:{cellWidth:CW*0.24, halign:'right', fontStyle:'bold', textColor:TEXT},
+    2:{cellWidth:CW*0.42, textColor:MUTED, fontSize:7}
+  });
+  if(y > H-80){ doc.addPage(); y=16; }
+
   // ── STRUKTUR KEMITRAAN ──
   y = sHead('STRUKTUR KEMITRAAN & BAGI HASIL', y, d.partnerSplits.length+' Mitra');
   var pRows = [];
@@ -1197,7 +1386,7 @@ function buildPDF(jsPDFLib){
     doc.text('Dokumen ini merupakan proyeksi estimasi — bukan laporan keuangan audit resmi.', W/2, fy+9, {align:'center'});
   }
 
-  var fname = 'ARIEFZ_FishFarm_'
+  var fname = 'Laporan_Keuangan_Budidaya_Ikan_'
     + now.getFullYear()
     + String(now.getMonth()+1).padStart(2,'0')
     + String(now.getDate()).padStart(2,'0')
