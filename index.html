@@ -14,9 +14,12 @@
   <header class="navbar">
     <div class="container nav-wrap">
       <a class="brand" href="#home">Sumber Jaya Makmur Farming</a>
-      <nav>
+      <button id="menuToggle" class="menu-toggle" aria-label="Buka menu navigasi" aria-expanded="false">☰</button>
+      <nav id="mainNav">
         <a href="#produk">Produk</a>
+        <a href="#galeri">Galeri</a>
         <a href="#simulasi">Simulasi</a>
+        <a href="#testimoni">Testimoni</a>
         <a href="#kemitraan">Kemitraan</a>
         <a href="#kontak" class="btn btn-sm">Hubungi Kami</a>
       </nav>
@@ -45,7 +48,7 @@
         </div>
         <aside class="hero-card">
           <h3>Kenapa beli dari kami?</h3>
-          <p>Lebih singkat rantai distribusi = harga lebih efisien untuk buyer, margin lebih sehat untuk petani.</p>
+          <p>Rantai distribusi lebih singkat = harga lebih efisien untuk buyer, margin lebih sehat untuk petani.</p>
           <div class="mini-stats">
             <div>
               <strong>+3 Ton</strong>
@@ -73,7 +76,15 @@
       </div>
     </section>
 
-    <section id="simulasi" class="section alt">
+    <section id="galeri" class="section alt">
+      <div class="container">
+        <h2>Galeri Ikan Segar</h2>
+        <p class="section-sub">Beberapa contoh ikan yang kami tawarkan untuk kebutuhan B2B & restoran.</p>
+        <div class="gallery-grid" id="fishGallery"></div>
+      </div>
+    </section>
+
+    <section id="simulasi" class="section">
       <div class="container sim-grid">
         <div>
           <h2>Simulasi Order B2B</h2>
@@ -102,6 +113,43 @@
           <h3>Estimasi Belanja</h3>
           <p class="placeholder">Isi form untuk melihat estimasi total pembelian.</p>
         </aside>
+      </div>
+    </section>
+
+    <section id="testimoni" class="section alt">
+      <div class="container">
+        <h2>Testimoni Pelanggan</h2>
+        <p class="section-sub">Pelanggan bisa memberikan feedback langsung agar layanan kami terus membaik.</p>
+        <div class="testimonial-layout">
+          <form id="testimonialForm" class="form-card">
+            <label>
+              Nama
+              <input type="text" id="customerName" placeholder="Contoh: Resto Bahari" required maxlength="60" />
+            </label>
+            <label>
+              Peran / Bisnis
+              <input type="text" id="customerRole" placeholder="Contoh: Owner Rumah Makan" required maxlength="80" />
+            </label>
+            <label>
+              Rating
+              <select id="customerRating" required>
+                <option value="5">⭐⭐⭐⭐⭐ (5)</option>
+                <option value="4">⭐⭐⭐⭐ (4)</option>
+                <option value="3">⭐⭐⭐ (3)</option>
+                <option value="2">⭐⭐ (2)</option>
+                <option value="1">⭐ (1)</option>
+              </select>
+            </label>
+            <label>
+              Testimoni
+              <textarea id="customerMessage" rows="4" placeholder="Ceritakan pengalaman Anda..." required maxlength="300"></textarea>
+            </label>
+            <button type="submit" class="btn">Kirim Testimoni</button>
+            <p id="testimonialFeedback" class="placeholder"></p>
+          </form>
+
+          <div id="testimonialList" class="testimonial-list" aria-live="polite"></div>
+        </div>
       </div>
     </section>
 
