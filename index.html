@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sumber Jaya Makmur Farming | Supplier Ikan Segar untuk B2B & Resto</title>
+  <meta name="description" content="Website resmi Sumber Jaya Makmur Farming untuk penjualan hasil ikan langsung ke B2B, restoran, hotel, dan reseller." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home">Sumber Jaya Makmur Farming</a>
+      <nav>
+        <a href="#produk">Produk</a>
+        <a href="#simulasi">Simulasi</a>
+        <a href="#kemitraan">Kemitraan</a>
+        <a href="#kontak" class="btn btn-sm">Hubungi Kami</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="badge">Direct to B2B & Resto</p>
+          <h1>Jual Ikan Lebih Untung, Langsung ke Pembeli Besar.</h1>
+          <p class="lead">
+            Sumber Jaya Makmur Farming menyediakan ikan segar berkualitas, pasokan stabil,
+            dan harga kompetitif untuk restoran, hotel, katering, serta distributor.
+          </p>
+          <div class="cta-row">
+            <a class="btn" href="#kontak">Minta Penawaran Harga</a>
+            <a class="btn btn-outline" href="#produk">Lihat Produk</a>
+          </div>
+          <ul class="trust-list">
+            <li>✅ Panen terjadwal & konsisten</li>
+            <li>✅ Quality check sebelum kirim</li>
+            <li>✅ Bisa kontrak pasokan mingguan/bulanan</li>
+          </ul>
+        </div>
+        <aside class="hero-card">
+          <h3>Kenapa beli dari kami?</h3>
+          <p>Lebih singkat rantai distribusi = harga lebih efisien untuk buyer, margin lebih sehat untuk petani.</p>
+          <div class="mini-stats">
+            <div>
+              <strong>+3 Ton</strong>
+              <span>Kapasitas panen / bulan*</span>
+            </div>
+            <div>
+              <strong>24 Jam</strong>
+              <span>Respon penawaran cepat</span>
+            </div>
+            <div>
+              <strong>Fresh</strong>
+              <span>Sortasi & packing rapi</span>
+            </div>
+          </div>
+          <small>*Dapat disesuaikan dengan musim panen.</small>
+        </aside>
+      </div>
+    </section>
+
+    <section id="produk" class="section">
+      <div class="container">
+        <h2>Produk Unggulan</h2>
+        <p class="section-sub">Pilih jenis ikan sesuai kebutuhan menu dan volume bisnis Anda.</p>
+        <div class="cards" id="productCards"></div>
+      </div>
+    </section>
+
+    <section id="simulasi" class="section alt">
+      <div class="container sim-grid">
+        <div>
+          <h2>Simulasi Order B2B</h2>
+          <p class="section-sub">Hitung cepat estimasi total belanja sebelum Anda menghubungi tim kami.</p>
+          <form id="calcForm" class="form-card">
+            <label>
+              Jenis Ikan
+              <select id="fishType"></select>
+            </label>
+            <label>
+              Jumlah (kg)
+              <input type="number" id="qtyKg" min="1" placeholder="Contoh: 150" required />
+            </label>
+            <label>
+              Frekuensi Pengiriman
+              <select id="deliveryFreq">
+                <option value="1">Sekali order</option>
+                <option value="4">Mingguan (4x/bulan)</option>
+                <option value="8">2x seminggu (8x/bulan)</option>
+              </select>
+            </label>
+            <button type="submit" class="btn">Hitung Estimasi</button>
+          </form>
+        </div>
+        <aside class="result-card" id="resultCard" aria-live="polite">
+          <h3>Estimasi Belanja</h3>
+          <p class="placeholder">Isi form untuk melihat estimasi total pembelian.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="kemitraan" class="section">
+      <div class="container">
+        <h2>Program Kemitraan</h2>
+        <div class="benefits">
+          <article>
+            <h3>Untuk Restoran / Hotel</h3>
+            <p>Kontrak pasokan stabil dengan harga transparan dan kualitas konsisten.</p>
+          </article>
+          <article>
+            <h3>Untuk Distributor</h3>
+            <p>Volume besar dengan jadwal kirim terstruktur dan dukungan komunikasi cepat.</p>
+          </article>
+          <article>
+            <h3>Untuk Reseller</h3>
+            <p>Skema pembelian fleksibel dan peluang margin lebih baik dari rantai tradisional.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="kontak" class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h2>Siap jadi partner pasokan ikan Anda?</h2>
+        <p>Kami terbuka untuk kerja sama jangka panjang B2B & resto dengan harga yang lebih masuk akal.</p>
+      </div>
+      <div class="contact-cta">
+        <a class="btn" href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">Chat WhatsApp</a>
+        <a class="btn btn-outline" href="mailto:sumberjayamakmurfarming@gmail.com">Email Kami</a>
+      </div>
+    </div>
+    <p class="copyright">© <span id="year"></span> Sumber Jaya Makmur Farming. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
