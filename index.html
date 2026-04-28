@@ -3,96 +3,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sumber Jaya Farm | Supplier Ikan Segar untuk B2B & Resto</title>
-  <meta name="description" content="Website resmi Sumber Jaya Farm untuk penjualan hasil ikan langsung ke B2B, restoran, hotel, dan reseller." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Sumber Jaya Farm - Budidaya Ikan Berkualitas</title>
+  <meta name="description" content="Website resmi Sumber Jaya Farm, usaha budidaya ikan dengan fokus pada kualitas, perawatan, dan hasil panen terbaik." />
+  <meta name="keywords" content="Sumber Jaya Farm, budidaya ikan, ikan gurame, ikan nila, fish farm, kolam ikan" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="navbar">
     <div class="container nav-wrap">
-      <a class="brand" href="#home">
-        <img src="assets-logo.svg" alt="Logo Sumber Jaya Farm" class="brand-logo" />
-        <span>Sumber Jaya Farm</span>
+      <a class="brand" href="#beranda">
+        <!-- GANTI_DENGAN_LOGO_SUMBER_JAYA_FARM -->
+        <img src="public/images/logo/logo-sumber-jaya-farm.svg" alt="Logo Sumber Jaya Farm" class="brand-logo" />
+        <div>
+          <span class="brand-title">Sumber Jaya Farm</span>
+          <small class="brand-sub">Budidaya Ikan Air Tawar</small>
+        </div>
       </a>
       <button id="menuToggle" class="menu-toggle" aria-label="Buka menu navigasi" aria-expanded="false">☰</button>
       <nav id="mainNav">
-        <a href="#produk">Produk</a>
+        <a href="#beranda">Beranda</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#jenis-ikan">Jenis Ikan</a>
         <a href="#galeri">Galeri</a>
-        <a href="#simulasi">Simulasi</a>
-        <a href="#testimoni">Testimoni</a>
-        <a href="#kemitraan">Kemitraan</a>
-        <a href="#kontak" class="btn btn-sm">Hubungi Kami</a>
+        <a href="#proses">Proses Budidaya</a>
+        <a href="#kontak">Kontak</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section id="home" class="hero">
+    <section id="beranda" class="hero section-anchor">
       <div class="container hero-grid">
         <div>
-          <p class="badge">Direct to B2B & Resto</p>
-          <p class="hero-kicker">Premium Freshwater Fish Supplier</p>
-          <h1>Jual Ikan Lebih Untung, Langsung ke Pembeli Besar.</h1>
-          <p class="lead">
-            Sumber Jaya Farm menyediakan ikan segar berkualitas, pasokan stabil,
-            dan harga kompetitif untuk restoran, hotel, katering, serta distributor.
-          </p>
+          <p class="badge">Modern Fish Farm Branding</p>
+          <h1>Sumber Jaya Farm</h1>
+          <p class="hero-tagline">Budidaya Ikan Berkualitas dari Lingkungan yang Terjaga.</p>
+          <p class="lead">Kami mengembangkan budidaya ikan air tawar dengan standar kolam terpantau, pakan terukur, dan perawatan harian yang konsisten untuk hasil panen sehat dan bernilai tinggi.</p>
           <div class="cta-row">
-            <a class="btn" href="#kontak">Minta Penawaran Harga</a>
-            <a class="btn btn-outline" href="#produk">Lihat Produk</a>
+            <a class="btn" href="#jenis-ikan">Lihat Produk</a>
+            <a class="btn btn-outline" href="#tentang">Tentang Farm</a>
+            <a class="btn btn-soft" href="#kontak">Hubungi Kami</a>
           </div>
-          <ul class="trust-list">
-            <li>✅ Panen terjadwal & konsisten</li>
-            <li>✅ Quality check sebelum kirim</li>
-            <li>✅ Bisa kontrak pasokan mingguan/bulanan</li>
-          </ul>
         </div>
-        <aside class="hero-card">
-          <h3>Kenapa beli dari kami?</h3>
-          <p>Rantai distribusi lebih singkat = harga lebih efisien untuk buyer, margin lebih sehat untuk petani.</p>
-          <div class="mini-stats">
-            <div>
-              <strong>+3 Ton</strong>
-              <span>Kapasitas panen / bulan*</span>
-            </div>
-            <div>
-              <strong>24 Jam</strong>
-              <span>Respon penawaran cepat</span>
-            </div>
-            <div>
-              <strong>Fresh</strong>
-              <span>Sortasi & packing rapi</span>
-            </div>
+        <aside class="hero-media-card">
+          <!-- GANTI_DENGAN_FOTO_UTAMA_FARM -->
+          <img src="public/images/gallery/hero-farm.svg" alt="Area kolam utama Sumber Jaya Farm" />
+          <div class="hero-media-meta">
+            <strong>Farm View</strong>
+            <span>Area kolam, pengelolaan air, dan aktivitas panen.</span>
           </div>
-          <small>*Dapat disesuaikan dengan musim panen.</small>
         </aside>
       </div>
     </section>
 
-    <section id="produk" class="section">
+    <section id="tentang" class="section section-anchor">
+      <div class="container about-grid">
+        <article class="about-card">
+          <p class="section-kicker">Tentang Sumber Jaya Farm</p>
+          <h2>Fish farm lokal yang terstruktur, terpercaya, dan siap tumbuh bersama mitra.</h2>
+          <p>Kami fokus menjaga kualitas air, pakan teratur, dan pemilihan bibit unggul agar hasil budidaya tetap sehat, stabil, dan sesuai kebutuhan pasar lokal.</p>
+          <ul class="check-list">
+            <li>Terpercaya untuk pasokan lokal dan kerja sama jangka panjang.</li>
+            <li>Manajemen kolam disiplin dengan monitoring kualitas air berkala.</li>
+            <li>Proses budidaya rapi untuk memastikan kualitas panen terjaga.</li>
+          </ul>
+        </article>
+        <figure class="about-photo">
+          <!-- GANTI_DENGAN_FOTO_TIM_ATAU_KOLAM -->
+          <img src="public/images/gallery/tentang-farm.svg" alt="Dokumentasi kegiatan di Sumber Jaya Farm" />
+        </figure>
+      </div>
+    </section>
+
+    <section id="jenis-ikan" class="section alt section-anchor">
       <div class="container">
-        <h2>Produk Unggulan</h2>
-        <p class="section-sub">Pilih jenis ikan sesuai kebutuhan menu dan volume bisnis Anda.</p>
+        <h2>Jenis Ikan / Produk</h2>
+        <p class="section-sub">Komoditas budidaya utama yang siap untuk kebutuhan pasar lokal, rumah makan, dan kemitraan distribusi.</p>
         <div class="cards" id="productCards"></div>
       </div>
     </section>
 
-    <section id="galeri" class="section alt">
+    <section id="proses" class="section section-anchor">
       <div class="container">
-        <h2>Galeri Ikan Segar</h2>
-        <p class="section-sub">Beberapa contoh ikan yang kami tawarkan untuk kebutuhan B2B & restoran.</p>
-        <div class="gallery-grid" id="fishGallery"></div>
+        <h2>Proses Budidaya</h2>
+        <p class="section-sub">Alur budidaya yang kami jalankan untuk menjaga kualitas hasil panen dari awal hingga akhir.</p>
+        <div class="timeline" id="processTimeline"></div>
       </div>
     </section>
 
-    <section id="simulasi" class="section">
+    <section id="galeri" class="section alt section-anchor">
+      <div class="container">
+        <h2>Galeri Farm</h2>
+        <p class="section-sub">Dokumentasi kolam, ikan, panen, dan aktivitas tim di lapangan.</p>
+        <div class="gallery-grid" id="farmGallery"></div>
+      </div>
+    </section>
+
+    <section class="section stats-section">
+      <div class="container">
+        <h2>Statistik & Kepercayaan</h2>
+        <p class="section-sub">Angka ringkas untuk menggambarkan skala operasional Sumber Jaya Farm.</p>
+        <div class="stats-grid" id="statsGrid"></div>
+      </div>
+    </section>
+
+    <section class="section section-anchor" id="keunggulan">
+      <div class="container">
+        <h2>Keunggulan Farm</h2>
+        <div class="advantages-grid" id="advantagesGrid"></div>
+      </div>
+    </section>
+
+    <section id="simulasi" class="section alt section-anchor">
       <div class="container sim-grid">
         <div>
-          <h2>Simulasi Order B2B</h2>
-          <p class="section-sub">Hitung cepat estimasi total belanja sebelum Anda menghubungi tim kami.</p>
+          <h2>Simulasi Pembelian</h2>
+          <p class="section-sub">Fitur lama tetap tersedia untuk membantu Anda estimasi kebutuhan pembelian secara cepat.</p>
           <form id="calcForm" class="form-card">
             <label>
               Jenis Ikan
@@ -120,103 +149,50 @@
       </div>
     </section>
 
-    <section id="testimoni" class="section alt">
-      <div class="container">
-        <h2>Testimoni Pelanggan</h2>
-        <p class="section-sub">Pelanggan bisa memberikan feedback langsung agar layanan kami terus membaik.</p>
-        <div class="testimonial-layout">
-          <form id="testimonialForm" class="form-card">
-            <label>
-              Nama
-              <input type="text" id="customerName" placeholder="Contoh: Resto Bahari" required maxlength="60" />
-            </label>
-            <label>
-              Peran / Bisnis
-              <input type="text" id="customerRole" placeholder="Contoh: Owner Rumah Makan" required maxlength="80" />
-            </label>
-            <label>
-              Rating
-              <select id="customerRating" required>
-                <option value="5">⭐⭐⭐⭐⭐ (5)</option>
-                <option value="4">⭐⭐⭐⭐ (4)</option>
-                <option value="3">⭐⭐⭐ (3)</option>
-                <option value="2">⭐⭐ (2)</option>
-                <option value="1">⭐ (1)</option>
-              </select>
-            </label>
-            <label>
-              Testimoni
-              <textarea id="customerMessage" rows="4" placeholder="Ceritakan pengalaman Anda..." required maxlength="300"></textarea>
-            </label>
-            <button type="submit" class="btn">Kirim Testimoni</button>
-            <p id="testimonialFeedback" class="placeholder"></p>
-          </form>
-
-          <div id="testimonialList" class="testimonial-list" aria-live="polite"></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="kemitraan" class="section">
-      <div class="container">
-        <h2>Program Kemitraan</h2>
-        <div class="benefits">
-          <article>
-            <h3>Untuk Restoran / Hotel</h3>
-            <p>Kontrak pasokan stabil dengan harga transparan dan kualitas konsisten.</p>
-          </article>
-          <article>
-            <h3>Untuk Distributor</h3>
-            <p>Volume besar dengan jadwal kirim terstruktur dan dukungan komunikasi cepat.</p>
-          </article>
-          <article>
-            <h3>Untuk Reseller</h3>
-            <p>Skema pembelian fleksibel dan peluang margin lebih baik dari rantai tradisional.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="instagram" class="section alt">
-      <div class="container">
-        <h2>Instagram Preview</h2>
-        <p class="section-sub">Lihat update panen, proses sortasi, dan aktivitas harian kami di Instagram resmi.</p>
-        <div class="instagram-preview">
-          <div class="ig-profile-card">
-            <img src="assets-logo.svg" alt="Logo Sumber Jaya Farm" class="ig-avatar" />
-            <div>
-              <h3>Sumber Jaya Farm</h3>
-              <p>@sumberjayafarm123</p>
-              <a class="btn" href="https://www.instagram.com/sumberjayafarm123?igsh=MXRiMDlhdGFsMHc0dg==" target="_blank" rel="noopener noreferrer">Buka Instagram</a>
-            </div>
+    <section id="kontak" class="section section-anchor">
+      <div class="container contact-grid">
+        <article class="contact-card">
+          <p class="section-kicker">Kontak & Kerja Sama</p>
+          <h2>Mari kolaborasi untuk pembelian, supply rutin, atau kunjungan farm.</h2>
+          <p>Kami terbuka untuk kerja sama dengan pelaku usaha lokal, distributor, restoran, dan calon mitra budidaya.</p>
+          <div class="contact-actions">
+            <a class="btn" href="https://wa.me/GANTI_DENGAN_NOMOR_WHATSAPP" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a class="btn btn-outline" href="#">Instagram (Segera)</a>
+            <a class="btn btn-outline" href="#">TikTok (Segera)</a>
           </div>
-          <div class="ig-mock-grid" aria-label="Preview feed Instagram">
-            <div class="ig-post">Panen Lele Hari Ini</div>
-            <div class="ig-post">Sortasi Nila Fresh</div>
-            <div class="ig-post">Packing untuk Resto</div>
-            <div class="ig-post">Budidaya Patin</div>
-            <div class="ig-post">Quality Check</div>
-            <div class="ig-post">Pengiriman Pagi</div>
-          </div>
-        </div>
+        </article>
+        <aside class="contact-info">
+          <h3>Informasi Farm</h3>
+          <ul>
+            <li><strong>Lokasi:</strong> Sumber Jaya Farm, Indonesia (isi detail lokasi)</li>
+            <li><strong>Jam Operasional:</strong> Senin - Sabtu, 08.00 - 17.00</li>
+            <li><strong>WA:</strong> GANTI_DENGAN_NOMOR_WHATSAPP</li>
+            <li><strong>Email:</strong> sumberjayamakmurfarming@gmail.com</li>
+          </ul>
+        </aside>
       </div>
     </section>
-
   </main>
 
-  <footer id="kontak" class="footer">
+  <footer class="footer">
     <div class="container footer-grid">
       <div>
-        <h2>Siap jadi partner pasokan ikan Anda?</h2>
-        <p>Kami terbuka untuk kerja sama jangka panjang B2B & resto dengan harga yang lebih masuk akal.</p>
+        <h3>Sumber Jaya Farm</h3>
+        <p>Budidaya ikan air tawar modern dengan komitmen kualitas, ketepatan proses, dan kemitraan jangka panjang.</p>
       </div>
-      <div class="contact-cta">
-        <a class="btn" href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">Chat WhatsApp</a>
-        <a class="btn btn-outline" href="mailto:sumberjayamakmurfarming@gmail.com">Email Kami</a>
-        <a class="btn btn-outline" href="https://www.instagram.com/sumberjayafarm123?igsh=MXRiMDlhdGFsMHc0dg==" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <div>
+        <h4>Menu</h4>
+        <ul class="footer-links">
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#jenis-ikan">Jenis Ikan</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+          <li><a href="#proses">Proses Budidaya</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
       </div>
     </div>
-    <p class="copyright">© <span id="year"></span> Sumber Jaya Farm. All rights reserved.</p>
+    <p class="copyright">© <span id="year"></span> Sumber Jaya Farm. Seluruh hak cipta dilindungi.</p>
   </footer>
 
   <script src="script.js"></script>
