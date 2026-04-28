@@ -1,0 +1,12 @@
+<svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Sumber Jaya Farm">
+  <circle cx="160" cy="160" r="152" fill="#ffffff" stroke="#C79A3E" stroke-width="8"/>
+  <path d="M158 78C182 78 202 97 202 121H114C114 97 134 78 158 78Z" fill="#C79A3E"/>
+  <path d="M72 172C88 136 130 122 166 133C145 157 120 176 86 185L72 172Z" fill="#113A60"/>
+  <path d="M70 183C114 175 148 197 176 214C146 242 102 246 74 222C67 215 64 200 70 183Z" fill="#0D3458"/>
+  <path d="M166 132C193 134 217 146 242 164V216C209 240 160 252 120 240C143 206 156 176 166 132Z" fill="#2F6E1F"/>
+  <path d="M214 125H265V176H214V125Z" fill="#2F6E1F"/>
+  <rect x="234" y="142" width="16" height="18" fill="#ffffff"/>
+  <path d="M188 141C198 141 206 149 206 159V177H171V159C171 149 179 141 188 141Z" fill="#2F6E1F"/>
+  <path d="M78 233C116 211 165 213 244 232" stroke="#0C4371" stroke-width="10" stroke-linecap="round"/>
+  <path d="M82 251C120 229 171 231 246 248" stroke="#0C4371" stroke-width="10" stroke-linecap="round"/>
+</svg>
