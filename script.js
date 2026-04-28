@@ -1,73 +1,102 @@
 const products = [
   {
-    name: 'Ikan Nila Fresh',
+    name: 'Gurame',
+    description: 'Ikan premium air tawar dengan tekstur daging padat dan rasa gurih.',
+    advantages: 'Cocok untuk menu bakar, goreng, dan sup premium.',
+    status: 'Tersedia sesuai siklus panen',
+    size: 'Ukuran konsumsi 500-900 gr/ekor',
+    price: 48000,
+    // GANTI_DENGAN_FOTO_IKAN
+    image: 'public/images/fish/gurame.svg'
+  },
+  {
+    name: 'Nila',
+    description: 'Komoditas favorit pasar lokal karena pertumbuhan cepat dan permintaan stabil.',
+    advantages: 'Mudah diolah, cocok untuk skala rumah makan hingga distributor.',
+    status: 'Ready stock berkala',
     size: 'Ukuran konsumsi 300-500 gr/ekor',
     price: 36000,
-    note: 'Cocok untuk menu bakar, goreng, dan pecak.'
+    // GANTI_DENGAN_FOTO_IKAN
+    image: 'public/images/fish/nila.svg'
   },
   {
-    name: 'Ikan Lele Segar',
+    name: 'Lele',
+    description: 'Ikan konsumsi harian dengan harga kompetitif dan pasar yang luas.',
+    advantages: 'Pilihan tepat untuk kebutuhan supply rutin warung dan katering.',
+    status: 'Tersedia harian',
     size: 'Ukuran 7-9 ekor/kg',
     price: 28000,
-    note: 'Ideal untuk warung pecel lele dan katering.'
+    // GANTI_DENGAN_FOTO_IKAN
+    image: 'public/images/fish/lele.svg'
   },
   {
-    name: 'Ikan Patin Fresh',
+    name: 'Patin',
+    description: 'Ikan berdaging lembut dengan nilai ekonomi tinggi untuk berbagai olahan.',
+    advantages: 'Cocok untuk fillet, sup, gulai, dan menu keluarga.',
+    status: 'Tersedia by request volume',
     size: 'Ukuran 800 gr - 1.2 kg/ekor',
     price: 34000,
-    note: 'Tekstur lembut untuk sup, gulai, dan fillet.'
+    // GANTI_DENGAN_FOTO_IKAN
+    image: 'public/images/fish/patin.svg'
+  },
+  {
+    name: 'Ikan Lainnya',
+    description: 'Kami juga membuka opsi budidaya komoditas lain sesuai kebutuhan mitra.',
+    advantages: 'Skema kerja sama fleksibel untuk pengembangan produk.',
+    status: 'Diskusi kemitraan',
+    size: 'Menyesuaikan permintaan',
+    price: 0,
+    // GANTI_DENGAN_FOTO_IKAN
+    image: 'public/images/fish/ikan-lainnya.svg'
   }
 ];
 
-const fishGallery = [
-  {
-    name: 'Ikan Nila Segar',
-    image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80'
-  },
-  {
-    name: 'Ikan Lele Hasil Budidaya',
-    image: 'https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?auto=format&fit=crop&w=1200&q=80'
-  },
-  {
-    name: 'Ikan Patin Berkualitas',
-    image: 'https://images.unsplash.com/photo-1611171711914-084e13f2dbb8?auto=format&fit=crop&w=1200&q=80'
-  }
+const processSteps = [
+  { title: 'Persiapan kolam', detail: 'Sterilisasi, pengeringan, dan pengecekan infrastruktur kolam sebelum tebar benih.' },
+  { title: 'Pemilihan bibit', detail: 'Pemilihan benih unggul, sehat, dan seragam untuk pertumbuhan optimal.' },
+  { title: 'Pemberian pakan', detail: 'Pakan diberikan teratur sesuai fase pertumbuhan dan target biomassa.' },
+  { title: 'Monitoring kualitas air', detail: 'Pemantauan pH, oksigen terlarut, dan kejernihan air secara berkala.' },
+  { title: 'Perawatan harian', detail: 'Kontrol kesehatan ikan, kebersihan kolam, dan pencatatan operasional.' },
+  { title: 'Panen', detail: 'Sortasi panen sesuai ukuran pasar dan persiapan distribusi.' }
 ];
 
-const defaultTestimonials = [
-  {
-    name: 'Resto Laut Nusantara',
-    role: 'Owner Restoran',
-    rating: 5,
-    message: 'Pasokan stabil dan kualitas ikan konsisten segar. Cocok untuk kebutuhan harian restoran kami.',
-    createdAt: '2026-03-10'
-  },
-  {
-    name: 'CV Boga Sejahtera',
-    role: 'Tim Procurement',
-    rating: 5,
-    message: 'Komunikasi cepat, pengiriman rapi, dan harga grosirnya kompetitif untuk kontrak bulanan.',
-    createdAt: '2026-03-18'
-  }
+const galleryItems = [
+  // GANTI_DENGAN_FOTO_GALERI
+  { name: 'Kolam utama', image: 'public/images/gallery/kolam-1.svg' },
+  { name: 'Aktivitas pakan', image: 'public/images/gallery/kegiatan-pakan-1.svg' },
+  { name: 'Persiapan panen', image: 'public/images/gallery/panen-1.svg' },
+  { name: 'Sortasi hasil', image: 'public/images/gallery/sortasi-1.svg' },
+  { name: 'Dokumentasi tim', image: 'public/images/gallery/tim-1.svg' },
+  { name: 'Area budidaya', image: 'public/images/gallery/kolam-2.svg' },
+  { name: 'Kontrol kualitas air', image: 'public/images/gallery/kualitas-air-1.svg' },
+  { name: 'Pengelolaan harian', image: 'public/images/gallery/kegiatan-harian-1.svg' }
 ];
 
-const TESTIMONIAL_STORAGE_KEY = 'fishFarmTestimonials';
+const stats = [
+  { value: '12+', label: 'Jumlah Kolam' },
+  { value: '5', label: 'Jenis Ikan Utama' },
+  { value: '8+', label: 'Tahun Pengalaman' },
+  { value: '3 Ton', label: 'Target Panen / Siklus' },
+  { value: '100%', label: 'Komitmen Kualitas' }
+];
+
+const advantages = [
+  { icon: '💧', title: 'Air kolam terpantau', text: 'Pemantauan kualitas air untuk menjaga kesehatan ikan.' },
+  { icon: '🕒', title: 'Pakan teratur', text: 'Jadwal pakan disiplin berdasarkan fase pertumbuhan.' },
+  { icon: '🧬', title: 'Bibit pilihan', text: 'Benih dipilih dengan standar kualitas dan ketahanan.' },
+  { icon: '🛟', title: 'Perawatan harian', text: 'Kontrol rutin untuk mencegah gangguan budidaya.' },
+  { icon: '🤝', title: 'Siap kerja sama', text: 'Terbuka untuk kemitraan supply maupun pengembangan komoditas.' },
+  { icon: '📦', title: 'Supply lokal', text: 'Mendukung kebutuhan pasar lokal dengan pasokan stabil.' }
+];
 
 const formatRupiah = (value) =>
   new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(value);
-
-const formatDate = (isoDate) =>
-  new Intl.DateTimeFormat('id-ID', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(isoDate));
 
 const productCards = document.getElementById('productCards');
 const fishTypeSelect = document.getElementById('fishType');
 const calcForm = document.getElementById('calcForm');
 const resultCard = document.getElementById('resultCard');
 const year = document.getElementById('year');
-const galleryContainer = document.getElementById('fishGallery');
-const testimonialForm = document.getElementById('testimonialForm');
-const testimonialList = document.getElementById('testimonialList');
-const testimonialFeedback = document.getElementById('testimonialFeedback');
 const menuToggle = document.getElementById('menuToggle');
 const mainNav = document.getElementById('mainNav');
 
@@ -78,29 +107,78 @@ function renderProducts() {
     .map(
       (item, index) => `
       <article>
+        <img class="fish-image" src="${item.image}" alt="Ikan ${item.name}" loading="lazy" />
         <h3>${item.name}</h3>
-        <p>${item.size}</p>
-        <p class="price">${formatRupiah(item.price)} / kg</p>
-        <p>${item.note}</p>
-        <button class="btn btn-sm" type="button" data-select="${index}">Pilih Produk</button>
+        <p>${item.description}</p>
+        <p><strong>Keunggulan:</strong> ${item.advantages}</p>
+        <p><strong>Ukuran:</strong> ${item.size}</p>
+        ${item.price ? `<p><strong>Harga indikatif:</strong> ${formatRupiah(item.price)} / kg</p>` : '<p><strong>Harga:</strong> Menyesuaikan kebutuhan</p>'}
+        <span class="chip">${item.status}</span>
+        <p><button class="btn" type="button" data-select="${index}">Pilih untuk Simulasi</button></p>
       </article>
     `
     )
     .join('');
 
   fishTypeSelect.innerHTML = products
+    .filter((item) => item.price > 0)
     .map((item, index) => `<option value="${index}">${item.name} - ${formatRupiah(item.price)}/kg</option>`)
     .join('');
 }
 
+function renderProcess() {
+  const processTimeline = document.getElementById('processTimeline');
+  processTimeline.innerHTML = processSteps
+    .map(
+      (item, index) => `
+        <article>
+          <span class="step">${index + 1}</span>
+          <h3>${item.title}</h3>
+          <p>${item.detail}</p>
+        </article>
+      `
+    )
+    .join('');
+}
+
 function renderGallery() {
-  galleryContainer.innerHTML = fishGallery
+  const farmGallery = document.getElementById('farmGallery');
+  farmGallery.innerHTML = galleryItems
     .map(
       (item) => `
         <figure class="gallery-item">
           <img src="${item.image}" alt="${item.name}" loading="lazy" />
           <figcaption>${item.name}</figcaption>
         </figure>
+      `
+    )
+    .join('');
+}
+
+function renderStats() {
+  const statsGrid = document.getElementById('statsGrid');
+  statsGrid.innerHTML = stats
+    .map(
+      (item) => `
+        <article>
+          <div class="stat-number">${item.value}</div>
+          <p>${item.label}</p>
+        </article>
+      `
+    )
+    .join('');
+}
+
+function renderAdvantages() {
+  const advantagesGrid = document.getElementById('advantagesGrid');
+  advantagesGrid.innerHTML = advantages
+    .map(
+      (item) => `
+        <article>
+          <div class="icon">${item.icon}</div>
+          <h3>${item.title}</h3>
+          <p>${item.text}</p>
+        </article>
       `
     )
     .join('');
@@ -134,80 +212,9 @@ function calculateEstimate(event) {
       <div><span>Total per Order</span><strong>${formatRupiah(subtotal)}</strong></div>
       <div><span>Proyeksi per Bulan</span><strong>${formatRupiah(monthlyProjection)}</strong></div>
     </div>
-    <p><strong>CTA:</strong> Hubungi kami sekarang untuk negosiasi harga grosir dan jadwal kirim tetap.</p>
-    <a class="btn" href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">Kunci Harga Sekarang</a>
+    <p><strong>CTA:</strong> Hubungi kami untuk negosiasi harga dan jadwal pengiriman.</p>
+    <a class="btn" href="https://wa.me/GANTI_DENGAN_NOMOR_WHATSAPP" target="_blank" rel="noopener noreferrer">Hubungi via WhatsApp</a>
   `;
-}
-
-function getTestimonials() {
-  const fromStorage = localStorage.getItem(TESTIMONIAL_STORAGE_KEY);
-  if (!fromStorage) return [...defaultTestimonials];
-
-  try {
-    const parsedTestimonials = JSON.parse(fromStorage);
-    if (!Array.isArray(parsedTestimonials)) return [...defaultTestimonials];
-    return parsedTestimonials;
-  } catch {
-    return [...defaultTestimonials];
-  }
-}
-
-function saveTestimonials(testimonials) {
-  localStorage.setItem(TESTIMONIAL_STORAGE_KEY, JSON.stringify(testimonials));
-}
-
-function renderTestimonials() {
-  const testimonials = getTestimonials();
-
-  testimonialList.innerHTML = testimonials
-    .slice()
-    .reverse()
-    .map(
-      (item) => `
-        <article class="testimonial-item">
-          <div class="testimonial-head">
-            <div>
-              <strong>${item.name}</strong>
-              <div class="testimonial-role">${item.role}</div>
-            </div>
-            <div class="testimonial-date">${formatDate(item.createdAt)}</div>
-          </div>
-          <div class="rating" aria-label="Rating ${item.rating} dari 5">${'⭐'.repeat(item.rating)}</div>
-          <p>${item.message}</p>
-        </article>
-      `
-    )
-    .join('');
-}
-
-function handleTestimonialSubmit(event) {
-  event.preventDefault();
-
-  const name = document.getElementById('customerName').value.trim();
-  const role = document.getElementById('customerRole').value.trim();
-  const rating = Number(document.getElementById('customerRating').value);
-  const message = document.getElementById('customerMessage').value.trim();
-
-  if (!name || !role || !message || !Number.isFinite(rating)) {
-    testimonialFeedback.textContent = 'Mohon isi semua data testimoni dengan lengkap.';
-    return;
-  }
-
-  const newTestimonial = {
-    name,
-    role,
-    rating,
-    message,
-    createdAt: new Date().toISOString()
-  };
-
-  const testimonials = getTestimonials();
-  testimonials.push(newTestimonial);
-  saveTestimonials(testimonials);
-  renderTestimonials();
-
-  testimonialFeedback.textContent = 'Terima kasih! Testimoni Anda sudah kami terima.';
-  testimonialForm.reset();
 }
 
 function initMobileMenu() {
@@ -237,9 +244,10 @@ productCards?.addEventListener('click', (event) => {
 });
 
 calcForm?.addEventListener('submit', calculateEstimate);
-testimonialForm?.addEventListener('submit', handleTestimonialSubmit);
 
 renderProducts();
+renderProcess();
 renderGallery();
-renderTestimonials();
+renderStats();
+renderAdvantages();
 initMobileMenu();
