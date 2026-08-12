@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Rantai Dingin">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0.35" y2="1"><stop offset="0%" stop-color="#122a30"/><stop offset="100%" stop-color="#08181c"/></linearGradient><linearGradient id="w" x1="0" y1="0" x2="0.35" y2="1"><stop offset="0%" stop-color="#12586a"/><stop offset="100%" stop-color="#06242c"/></linearGradient></defs>
+<rect width="1200" height="800" fill="url(#sky)"/><rect y="300" width="1200" height="500" fill="url(#w)"/><path d="M60 360 q 45 -14 90 0 q 45 14 90 0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" stroke-linecap="round"/><path d="M197 406 q 67.75 -14 135.5 0 q 67.75 14 135.5 0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" stroke-linecap="round"/><path d="M114 452 q 90.5 -14 181 0 q 90.5 14 181 0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" stroke-linecap="round"/><path d="M251 498 q 48.25 -14 96.5 0 q 48.25 14 96.5 0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" stroke-linecap="round"/><path d="M168 544 q 71 -14 142 0 q 71 14 142 0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" stroke-linecap="round"/><path d="M85 590 q 93.75 -14 187.5 0 q 93.75 14 187.5 0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" stroke-linecap="round"/><path d="M222 636 q 51.5 -14 103 0 q 51.5 14 103 0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" stroke-linecap="round"/><path d="M139 682 q 74.25 -14 148.5 0 q 74.25 14 148.5 0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" stroke-linecap="round"/><g>
+        <rect x="220" y="330" width="760" height="330" rx="26" fill="#dbe9ee" opacity="0.14" stroke="rgba(255,255,255,0.3)" stroke-width="6"/>
+        <rect x="220" y="330" width="760" height="70" rx="18" fill="rgba(255,255,255,0.16)"/>
+        <rect x="260" y="430" width="42" height="30" rx="6" fill="rgba(255,255,255,0.30)" transform="rotate(-20 280 445)"/><rect x="357" y="491" width="42" height="30" rx="6" fill="rgba(255,255,255,0.30)" transform="rotate(17 377 506)"/><rect x="454" y="552" width="42" height="30" rx="6" fill="rgba(255,255,255,0.30)" transform="rotate(14 474 567)"/><rect x="551" y="433" width="42" height="30" rx="6" fill="rgba(255,255,255,0.30)" transform="rotate(11 571 448)"/><rect x="648" y="494" width="42" height="30" rx="6" fill="rgba(255,255,255,0.30)" transform="rotate(8 668 509)"/><rect x="745" y="555" width="42" height="30" rx="6" fill="rgba(255,255,255,0.30)" transform="rotate(5 765 570)"/><rect x="842" y="436" width="42" height="30" rx="6" fill="rgba(255,255,255,0.30)" transform="rotate(2 862 451)"/><rect x="279" y="497" width="42" height="30" rx="6" fill="rgba(255,255,255,0.30)" transform="rotate(-1 299 512)"/><rect x="376" y="558" width="42" height="30" rx="6" fill="rgba(255,255,255,0.30)" transform="rotate(-4 396 573)"/><rect x="473" y="439" width="42" height="30" rx="6" fill="rgba(255,255,255,0.30)" transform="rotate(-7 493 454)"/><rect x="570" y="500" width="42" height="30" rx="6" fill="rgba(255,255,255,0.30)" transform="rotate(-10 590 515)"/><rect x="667" y="561" width="42" height="30" rx="6" fill="rgba(255,255,255,0.30)" transform="rotate(-13 687 576)"/><rect x="764" y="442" width="42" height="30" rx="6" fill="rgba(255,255,255,0.30)" transform="rotate(-16 784 457)"/><rect x="861" y="503" width="42" height="30" rx="6" fill="rgba(255,255,255,0.30)" transform="rotate(-19 881 518)"/><rect x="298" y="564" width="42" height="30" rx="6" fill="rgba(255,255,255,0.30)" transform="rotate(18 318 579)"/><rect x="395" y="445" width="42" height="30" rx="6" fill="rgba(255,255,255,0.30)" transform="rotate(15 415 460)"/><rect x="492" y="506" width="42" height="30" rx="6" fill="rgba(255,255,255,0.30)" transform="rotate(12 512 521)"/><rect x="589" y="567" width="42" height="30" rx="6" fill="rgba(255,255,255,0.30)" transform="rotate(9 609 582)"/><rect x="686" y="448" width="42" height="30" rx="6" fill="rgba(255,255,255,0.30)" transform="rotate(6 706 463)"/><rect x="783" y="509" width="42" height="30" rx="6" fill="rgba(255,255,255,0.30)" transform="rotate(3 803 524)"/><rect x="880" y="570" width="42" height="30" rx="6" fill="rgba(255,255,255,0.30)" transform="rotate(0 900 585)"/><rect x="317" y="451" width="42" height="30" rx="6" fill="rgba(255,255,255,0.30)" transform="rotate(-3 337 466)"/>
+        <g>
+    <path d="M410 541.64 L344 514.1 L370.4 560 L344 605.9 L410 576.2 Z" fill="#4b6b5e"/>
+    <path d="M550.8 515.72 Q 520 473.6 473.8 526.52 Z" fill="#4b6b5e"/>
+    <path d="M531 606.44 Q 509 636.68 465 592.4 Z" fill="#4b6b5e"/>
+    <path d="M630 560 C 580.5 506 481.5 506 410 541.64 C 481.5 614 580.5 614 630 560 Z" fill="#b9cfc4"/>
+    <path d="M630 560 C 564 598.88 487 593.48 410 567.56 L630 560 Z" fill="#eef5f1" opacity="0.55"/>
+    
+    <path d="M566.2 569.72 Q 542 611.3 517.8 578.36 Z" fill="#4b6b5e" opacity="0.85"/>
+    <circle cx="605.8" cy="547.04" r="5.4" fill="#f4fbf6"/>
+    <circle cx="606.9" cy="547.04" r="2.7" fill="#0a0f0b"/>
+    <path d="M586 527.6 q -6 32.4 0 56.7" fill="none" stroke="rgba(10,15,11,0.18)" stroke-width="7"/>
+  </g>
+        <g>
+    <path d="M665 574.36 L608 550.9 L630.8 590 L608 629.1 L665 603.8 Z" fill="#4b6b5e"/>
+    <path d="M786.6 552.28 Q 760 516.4 720.1 561.48 Z" fill="#4b6b5e"/>
+    <path d="M769.5 629.56 Q 750.5 655.3199999999999 712.5 617.6 Z" fill="#4b6b5e"/>
+    <path d="M855 590 C 812.25 544 726.75 544 665 574.36 C 726.75 636 812.25 636 855 590 Z" fill="#b9cfc4"/>
+    <path d="M855 590 C 798 623.12 731.5 618.52 665 596.44 L855 590 Z" fill="#eef5f1" opacity="0.55"/>
+    
+    <path d="M799.9 598.28 Q 779 633.7 758.1 605.64 Z" fill="#4b6b5e" opacity="0.85"/>
+    <circle cx="834.1" cy="578.96" r="4.6000000000000005" fill="#f4fbf6"/>
+    <circle cx="835.05" cy="578.96" r="2.3000000000000003" fill="#0a0f0b"/>
+    <path d="M817 562.4 q -6 27.599999999999998 0 48.300000000000004" fill="none" stroke="rgba(10,15,11,0.18)" stroke-width="7"/>
+  </g>
+        <text x="600" y="392" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-family="'IBM Plex Mono',monospace" font-size="30">COOL BOX · 0-4 °C</text>
+      </g>
+</svg>

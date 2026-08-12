@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Sortasi &amp; Grading">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0.35" y2="1"><stop offset="0%" stop-color="#152c1d"/><stop offset="100%" stop-color="#0a1810"/></linearGradient><linearGradient id="w" x1="0" y1="0" x2="0.35" y2="1"><stop offset="0%" stop-color="#1a5f4c"/><stop offset="100%" stop-color="#092a22"/></linearGradient></defs>
+<rect width="1200" height="800" fill="url(#sky)"/><rect y="300" width="1200" height="500" fill="url(#w)"/><path d="M60 360 q 45 -14 90 0 q 45 14 90 0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" stroke-linecap="round"/><path d="M197 406 q 67.75 -14 135.5 0 q 67.75 14 135.5 0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" stroke-linecap="round"/><path d="M114 452 q 90.5 -14 181 0 q 90.5 14 181 0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" stroke-linecap="round"/><path d="M251 498 q 48.25 -14 96.5 0 q 48.25 14 96.5 0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" stroke-linecap="round"/><path d="M168 544 q 71 -14 142 0 q 71 14 142 0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" stroke-linecap="round"/><path d="M85 590 q 93.75 -14 187.5 0 q 93.75 14 187.5 0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" stroke-linecap="round"/><path d="M222 636 q 51.5 -14 103 0 q 51.5 14 103 0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" stroke-linecap="round"/><path d="M139 682 q 74.25 -14 148.5 0 q 74.25 14 148.5 0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" stroke-linecap="round"/><g>
+        <g transform="translate(120,350)">
+          <rect width="300" height="300" rx="22" fill="rgba(6,20,14,0.45)" stroke="rgba(255,255,255,0.22)" stroke-width="5"/>
+          <text x="150" y="56" text-anchor="middle" fill="rgba(255,255,255,0.62)" font-family="'IBM Plex Mono',monospace" font-size="26">GRADE A</text>
+          <g>
+    <path d="M50 104.36 L-10 80.9 L14 120 L-10 159.1 L50 133.8 Z" fill="#3f6d5b"/>
+    <path d="M178 82.28 Q 150 46.39999999999999 108 91.48 Z" fill="#3f6d5b"/>
+    <path d="M160 159.56 Q 140 185.32 100 147.6 Z" fill="#3f6d5b"/>
+    <path d="M250 120 C 205 74 115 74 50 104.36 C 115 166 205 166 250 120 Z" fill="#9fc2b2"/>
+    <path d="M250 120 C 190 153.12 120 148.52 50 126.44 L250 120 Z" fill="#e6f2ec" opacity="0.55"/>
+    
+    <path d="M192 128.28 Q 170 163.7 148 135.64 Z" fill="#3f6d5b" opacity="0.85"/>
+    <circle cx="228" cy="108.96000000000001" r="4.6000000000000005" fill="#f4fbf6"/>
+    <circle cx="229" cy="108.96000000000001" r="2.3000000000000003" fill="#0a0f0b"/>
+    <path d="M210 92.4 q -6 27.599999999999998 0 48.300000000000004" fill="none" stroke="rgba(10,15,11,0.18)" stroke-width="7"/>
+  </g><g>
+    <path d="M50 174.36 L-10 150.9 L14 190 L-10 229.1 L50 203.8 Z" fill="#3f6d5b"/>
+    <path d="M178 152.28 Q 150 116.39999999999999 108 161.48 Z" fill="#3f6d5b"/>
+    <path d="M160 229.56 Q 140 255.32 100 217.6 Z" fill="#3f6d5b"/>
+    <path d="M250 190 C 205 144 115 144 50 174.36 C 115 236 205 236 250 190 Z" fill="#9fc2b2"/>
+    <path d="M250 190 C 190 223.12 120 218.52 50 196.44 L250 190 Z" fill="#e6f2ec" opacity="0.55"/>
+    
+    <path d="M192 198.28 Q 170 233.7 148 205.64 Z" fill="#3f6d5b" opacity="0.85"/>
+    <circle cx="228" cy="178.96" r="4.6000000000000005" fill="#f4fbf6"/>
+    <circle cx="229" cy="178.96" r="2.3000000000000003" fill="#0a0f0b"/>
+    <path d="M210 162.4 q -6 27.599999999999998 0 48.300000000000004" fill="none" stroke="rgba(10,15,11,0.18)" stroke-width="7"/>
+  </g><g>
+    <path d="M50 244.36 L-10 220.9 L14 260 L-10 299.1 L50 273.8 Z" fill="#3f6d5b"/>
+    <path d="M178 222.28 Q 150 186.39999999999998 108 231.48 Z" fill="#3f6d5b"/>
+    <path d="M160 299.56 Q 140 325.32 100 287.6 Z" fill="#3f6d5b"/>
+    <path d="M250 260 C 205 214 115 214 50 244.36 C 115 306 205 306 250 260 Z" fill="#9fc2b2"/>
+    <path d="M250 260 C 190 293.12 120 288.52 50 266.44 L250 260 Z" fill="#e6f2ec" opacity="0.55"/>
+    
+    <path d="M192 268.28 Q 170 303.7 148 275.64 Z" fill="#3f6d5b" opacity="0.85"/>
+    <circle cx="228" cy="248.96" r="4.6000000000000005" fill="#f4fbf6"/>
+    <circle cx="229" cy="248.96" r="2.3000000000000003" fill="#0a0f0b"/>
+    <path d="M210 232.4 q -6 27.599999999999998 0 48.300000000000004" fill="none" stroke="rgba(10,15,11,0.18)" stroke-width="7"/>
+  </g>
+        </g><g transform="translate(460,350)">
+          <rect width="300" height="300" rx="22" fill="rgba(6,20,14,0.45)" stroke="rgba(255,255,255,0.22)" stroke-width="5"/>
+          <text x="150" y="56" text-anchor="middle" fill="rgba(255,255,255,0.62)" font-family="'IBM Plex Mono',monospace" font-size="26">GRADE B</text>
+          <g>
+    <path d="M70 107.42 L22 88.55 L41.2 120 L22 151.45 L70 131.1 Z" fill="#3f6d5b"/>
+    <path d="M172.4 89.66 Q 150 60.8 116.4 97.06 Z" fill="#3f6d5b"/>
+    <path d="M158 151.82 Q 142 172.54 110 142.2 Z" fill="#3f6d5b"/>
+    <path d="M230 120 C 194 83 122 83 70 107.42 C 122 157 194 157 230 120 Z" fill="#9fc2b2"/>
+    <path d="M230 120 C 182 146.64 126 142.94 70 125.18 L230 120 Z" fill="#e6f2ec" opacity="0.55"/>
+    
+    <path d="M183.6 126.66 Q 166 155.15 148.4 132.58 Z" fill="#3f6d5b" opacity="0.85"/>
+    <circle cx="212.4" cy="111.12" r="3.7" fill="#f4fbf6"/>
+    <circle cx="213.2" cy="111.12" r="1.85" fill="#0a0f0b"/>
+    <path d="M198 97.8 q -6 22.2 0 38.85" fill="none" stroke="rgba(10,15,11,0.18)" stroke-width="7"/>
+  </g><g>
+    <path d="M70 177.42 L22 158.55 L41.2 190 L22 221.45 L70 201.1 Z" fill="#3f6d5b"/>
+    <path d="M172.4 159.66 Q 150 130.8 116.4 167.06 Z" fill="#3f6d5b"/>
+    <path d="M158 221.82 Q 142 242.54 110 212.2 Z" fill="#3f6d5b"/>
+    <path d="M230 190 C 194 153 122 153 70 177.42 C 122 227 194 227 230 190 Z" fill="#9fc2b2"/>
+    <path d="M230 190 C 182 216.64 126 212.94 70 195.18 L230 190 Z" fill="#e6f2ec" opacity="0.55"/>
+    
+    <path d="M183.6 196.66 Q 166 225.15 148.4 202.58 Z" fill="#3f6d5b" opacity="0.85"/>
+    <circle cx="212.4" cy="181.12" r="3.7" fill="#f4fbf6"/>
+    <circle cx="213.2" cy="181.12" r="1.85" fill="#0a0f0b"/>
+    <path d="M198 167.8 q -6 22.2 0 38.85" fill="none" stroke="rgba(10,15,11,0.18)" stroke-width="7"/>
+  </g>
+        </g><g transform="translate(800,350)">
+          <rect width="300" height="300" rx="22" fill="rgba(6,20,14,0.45)" stroke="rgba(255,255,255,0.22)" stroke-width="5"/>
+          <text x="150" y="56" text-anchor="middle" fill="rgba(255,255,255,0.62)" font-family="'IBM Plex Mono',monospace" font-size="26">GRADE C</text>
+          <g>
+    <path d="M90 110.48 L54 96.2 L68.4 120 L54 143.8 L90 128.4 Z" fill="#3f6d5b"/>
+    <path d="M166.8 97.04 Q 150 75.19999999999999 124.8 102.64 Z" fill="#3f6d5b"/>
+    <path d="M156 144.07999999999998 Q 144 159.76 120 136.8 Z" fill="#3f6d5b"/>
+    <path d="M210 120 C 183 92 129 92 90 110.48 C 129 148 183 148 210 120 Z" fill="#9fc2b2"/>
+    <path d="M210 120 C 174 140.16 132 137.36 90 123.92 L210 120 Z" fill="#e6f2ec" opacity="0.55"/>
+    
+    <path d="M175.2 125.04 Q 162 146.6 148.8 129.52 Z" fill="#3f6d5b" opacity="0.85"/>
+    <circle cx="196.8" cy="113.28" r="2.8000000000000003" fill="#f4fbf6"/>
+    <circle cx="197.4" cy="113.28" r="1.4000000000000001" fill="#0a0f0b"/>
+    <path d="M186 103.2 q -6 16.8 0 29.400000000000002" fill="none" stroke="rgba(10,15,11,0.18)" stroke-width="7"/>
+  </g>
+        </g>
+      </g>
+</svg>
