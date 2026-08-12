@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aquaculture Hub — Sumber Jaya Farm</title>
+<meta name="description" content="Panduan dan kalkulator ROI 10 komoditas budidaya ikan Indonesia: galeri sistem kolam, peta sentra produksi, alur budidaya, dan simulasi keuntungan per siklus." />
+<meta name="keywords" content="budidaya ikan, aquaculture, ROI budidaya ikan, nila, lele, patin, vaname, gurame, bandeng, kalkulator ROI" />
+<link rel="icon" href="../public/images/logo/logo-sumber-jaya-farm.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="shell">
+  <!-- ── SIDEBAR ───────────────────────────────────────────────────────── -->
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#/">
+      <span class="brand-dot"></span>
+      <span>
+        <span class="brand-name">AQUACULTURE HUB</span><br />
+        <span class="brand-sub">Sumber Jaya Farm</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <div class="nav-group">Ringkasan</div>
+      <a class="nav-item" href="#/" data-route="/">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 8 2l6 4.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/><path d="M6.5 14V9h3v5"/></svg>
+        Beranda
+      </a>
+      <a class="nav-item" href="#/galeri" data-route="/galeri">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="12" height="10" rx="1.5"/><path d="m2 10.5 3-3 3 3 2-2 4 4"/><circle cx="10" cy="6" r="1"/></svg>
+        Galeri Aquaculture
+        <span class="nav-badge" id="navGalCount"></span>
+      </a>
+
+      <div class="nav-group">Komoditas</div>
+      <a class="nav-item" href="#/komoditas" data-route="/komoditas">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 8c-2.2 2.6-4.4 3.9-6.6 3.9C5.2 11.9 3.3 10.6 2 8c1.3-2.6 3.2-3.9 5.4-3.9C9.6 4.1 11.8 5.4 14 8Z"/><circle cx="6" cy="8" r=".8" fill="currentColor"/></svg>
+        Top 10 Komoditas
+        <span class="nav-badge">10</span>
+      </a>
+      <a class="nav-item" href="#/skenario" data-route="/skenario">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 13V3"/><path d="M2 13h12"/><rect x="4.5" y="8" width="2.5" height="3"/><rect x="9" y="5" width="2.5" height="6"/></svg>
+        Bandingkan Skenario
+      </a>
+
+      <div class="nav-group">Analisis</div>
+      <a class="nav-item" href="#/roi" data-route="/roi">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="2" width="10" height="12" rx="1.5"/><path d="M5.5 5h5M5.5 8h2M5.5 11h2M10 8v3"/></svg>
+        Kalkulator ROI
+      </a>
+
+      <div class="nav-group">Panduan</div>
+      <a class="nav-item" href="#/peta" data-route="/peta">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m2 4 4-1.5 4 1.5 4-1.5v9L10 13 6 11.5 2 13z"/><path d="M6 2.5v9M10 4v9"/></svg>
+        Peta Sentra Budidaya
+      </a>
+      <a class="nav-item" href="#/alur" data-route="/alur">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="4" cy="4" r="2"/><circle cx="12" cy="12" r="2"/><path d="M4 6v4a2 2 0 0 0 2 2h4"/></svg>
+        Alur &amp; Sistem Budidaya
+      </a>
+      <a class="nav-item" href="#/glosarium" data-route="/glosarium">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2.5h7a2 2 0 0 1 2 2V14H5a2 2 0 0 1-2-2z"/><path d="M5.5 5.5h4M5.5 8h4"/></svg>
+        Glosarium
+      </a>
+    </nav>
+
+    <!-- ROI ringkas: mengikuti kalkulator, terlihat di seluruh halaman -->
+    <div class="side-roi" id="sideRoi">
+      <div class="side-roi-hd">
+        <span>ROI Aktif</span>
+        <span class="tag" id="sideTag">—</span>
+      </div>
+      <div class="side-roi-species" id="sideSpecies">—</div>
+      <div class="side-roi-scen" id="sideScen">—</div>
+      <div class="side-roi-grid">
+        <div class="side-roi-cell"><div class="k">ROI / siklus</div><div class="v" id="sideRoiVal">—</div></div>
+        <div class="side-roi-cell"><div class="k">Laba / siklus</div><div class="v" id="sideProfit">—</div></div>
+      </div>
+      <a class="side-roi-link" href="#/roi">Buka kalkulator</a>
+    </div>
+  </aside>
+
+  <div class="scrim" id="scrim"></div>
+
+  <!-- ── KONTEN ────────────────────────────────────────────────────────── -->
+  <main class="content">
+    <div class="topbar">
+      <button class="menu-btn" id="menuBtn" aria-label="Buka menu">☰</button>
+      <div class="crumb" id="crumb">Aquaculture Hub</div>
+      <div class="topbar-actions">
+        <a class="btn" href="../index.html">← Situs Utama</a>
+      </div>
+    </div>
+
+    <div class="page" id="view"></div>
+
+    <footer class="page-footer">
+      <div>&copy; 2026 <span>SUMBER JAYA FARM</span> · Aquaculture Hub · Kediri, Jawa Timur</div>
+      <div>Angka bersifat estimasi — sesuaikan dengan harga lokal.</div>
+    </footer>
+  </main>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose" aria-label="Tutup">✕</button>
+  <div class="lightbox-inner">
+    <img id="lbImg" src="" alt="" />
+    <div class="lightbox-cap">
+      <div><b id="lbTitle"></b><p id="lbText"></p></div>
+      <span class="tag" id="lbTag"></span>
+    </div>
+  </div>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+<div class="toast" id="toast"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

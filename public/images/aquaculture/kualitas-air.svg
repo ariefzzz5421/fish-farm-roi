@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Kontrol Kualitas Air">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0.35" y2="1"><stop offset="0%" stop-color="#0f2a33"/><stop offset="100%" stop-color="#081920"/></linearGradient><linearGradient id="w" x1="0" y1="0" x2="0.35" y2="1"><stop offset="0%" stop-color="#126070"/><stop offset="100%" stop-color="#062730"/></linearGradient></defs>
+<rect width="1200" height="800" fill="url(#sky)"/><rect y="300" width="1200" height="500" fill="url(#w)"/><path d="M60 360 q 45 -14 90 0 q 45 14 90 0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" stroke-linecap="round"/><path d="M197 406 q 67.75 -14 135.5 0 q 67.75 14 135.5 0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" stroke-linecap="round"/><path d="M114 452 q 90.5 -14 181 0 q 90.5 14 181 0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" stroke-linecap="round"/><path d="M251 498 q 48.25 -14 96.5 0 q 48.25 14 96.5 0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" stroke-linecap="round"/><path d="M168 544 q 71 -14 142 0 q 71 14 142 0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" stroke-linecap="round"/><path d="M85 590 q 93.75 -14 187.5 0 q 93.75 14 187.5 0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" stroke-linecap="round"/><path d="M222 636 q 51.5 -14 103 0 q 51.5 14 103 0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" stroke-linecap="round"/><path d="M139 682 q 74.25 -14 148.5 0 q 74.25 14 148.5 0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" stroke-linecap="round"/><g>
+        
+          <g transform="translate(140,360)">
+            <rect width="200" height="140" rx="18" fill="rgba(6,20,16,0.55)" stroke="rgba(255,255,255,0.22)" stroke-width="4"/>
+            <text x="24" y="52" fill="rgba(255,255,255,0.6)" font-family="'IBM Plex Mono',monospace" font-size="24">DO</text>
+            <text x="24" y="106" fill="#7ee2ad" font-family="'IBM Plex Mono',monospace" font-size="38" font-weight="600">5.8 mg/L</text>
+          </g>
+          <g transform="translate(380,360)">
+            <rect width="200" height="140" rx="18" fill="rgba(6,20,16,0.55)" stroke="rgba(255,255,255,0.22)" stroke-width="4"/>
+            <text x="24" y="52" fill="rgba(255,255,255,0.6)" font-family="'IBM Plex Mono',monospace" font-size="24">pH</text>
+            <text x="24" y="106" fill="#7ee2ad" font-family="'IBM Plex Mono',monospace" font-size="38" font-weight="600">7.4</text>
+          </g>
+          <g transform="translate(620,360)">
+            <rect width="200" height="140" rx="18" fill="rgba(6,20,16,0.55)" stroke="rgba(255,255,255,0.22)" stroke-width="4"/>
+            <text x="24" y="52" fill="rgba(255,255,255,0.6)" font-family="'IBM Plex Mono',monospace" font-size="24">SUHU</text>
+            <text x="24" y="106" fill="#7ee2ad" font-family="'IBM Plex Mono',monospace" font-size="38" font-weight="600">28.5 °C</text>
+          </g>
+          <g transform="translate(860,360)">
+            <rect width="200" height="140" rx="18" fill="rgba(6,20,16,0.55)" stroke="rgba(255,255,255,0.22)" stroke-width="4"/>
+            <text x="24" y="52" fill="rgba(255,255,255,0.6)" font-family="'IBM Plex Mono',monospace" font-size="24">NH3</text>
+            <text x="24" y="106" fill="#7ee2ad" font-family="'IBM Plex Mono',monospace" font-size="38" font-weight="600">0.02 mg/L</text>
+          </g>
+        <rect x="520" y="540" width="160" height="200" rx="16" fill="rgba(255,255,255,0.10)" stroke="rgba(255,255,255,0.3)" stroke-width="5"/>
+        <rect x="540" y="600" width="120" height="120" rx="10" fill="#2aa27c"/>
+        <circle cx="790" cy="760" r="4" fill="rgba(255,255,255,0.20)"/><circle cx="863" cy="703" r="13" fill="rgba(255,255,255,0.20)"/><circle cx="936" cy="646" r="11" fill="rgba(255,255,255,0.20)"/><circle cx="1009" cy="589" r="9" fill="rgba(255,255,255,0.20)"/><circle cx="862" cy="532" r="7" fill="rgba(255,255,255,0.20)"/><circle cx="935" cy="475" r="5" fill="rgba(255,255,255,0.20)"/><circle cx="1008" cy="718" r="14" fill="rgba(255,255,255,0.20)"/><circle cx="861" cy="661" r="12" fill="rgba(255,255,255,0.20)"/><circle cx="934" cy="604" r="10" fill="rgba(255,255,255,0.20)"/><circle cx="1007" cy="547" r="8" fill="rgba(255,255,255,0.20)"/><circle cx="860" cy="490" r="6" fill="rgba(255,255,255,0.20)"/><circle cx="933" cy="733" r="4" fill="rgba(255,255,255,0.20)"/>
+      </g>
+</svg>

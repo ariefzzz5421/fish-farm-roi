@@ -135,3 +135,19 @@ A successful change makes the app:
 - easier to understand
 - easier to maintain
 - more useful for real fish farming decisions
+
+## Struktur situs (per Agustus 2026)
+- `index.html`, `style.css`, `script.js` -> landing page Sumber Jaya Farm
+- `fishfarm-roi-calculator-v1.html`, `fishfarm-roi-calculator-v2.html` -> kalkulator ROI mandiri (v2 = versi acuan, jsPDF dibundel)
+- `aquaculture/` -> Aquaculture Hub: situs multi-halaman dengan sidebar dan hash routing
+  - `index.html` kerangka (sidebar + topbar + kontainer halaman)
+  - `styles.css` tema visual (lanjutan bahasa desain v2)
+  - `data.js` sumber data: 10 komoditas + skenario, sistem budidaya, tahapan, sentra produksi, galeri
+  - `app.js` router, halaman, dan mesin ROI (formula identik dengan v2)
+- `tools/generate-art.mjs` -> generator ilustrasi SVG (`node tools/generate-art.mjs`)
+- `public/images/species/`, `public/images/aquaculture/` -> hasil generator, jangan diedit manual
+
+### Aturan tambahan
+- Rute baru ditambahkan di array `ROUTES` pada `aquaculture/app.js`, bukan file HTML terpisah.
+- Formula ROI hanya boleh diubah di satu tempat (`calcROI`) agar tetap sama dengan kalkulator v2.
+- Semua angka komoditas di `data.js` adalah estimasi; jangan menyajikannya sebagai harga pasti.
