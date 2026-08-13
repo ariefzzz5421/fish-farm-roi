@@ -68,9 +68,10 @@ Situs statis, tanpa build. Di dashboard Vercel: **Add New → Project → Import
 repositori ini, lalu:
 
 - Framework Preset: **Other**
-- Build Command: kosongkan
-- Output Directory: kosongkan (root)
-- Install Command: kosongkan
+- Build Command / Install Command: kosongkan
+- Output Directory: kosongkan (akan diambil dari `vercel.json`)
 
-Konfigurasi `vercel.json` sudah mengatur `cleanUrls`, `trailingSlash`, cache
-gambar, dan alias `/hub` → `/aquaculture/`.
+`vercel.json` sudah mengatur semuanya: `outputDirectory: "."` (wajib, karena
+tanpa itu Vercel otomatis menganggap folder `public/` sebagai root situs dan
+semua halaman jadi 404), `cleanUrls`, `trailingSlash`, cache gambar, dan alias
+`/hub` → `/aquaculture/`.
